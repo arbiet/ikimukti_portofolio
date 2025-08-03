@@ -59,11 +59,11 @@ export default defineThemeConfig({
        */
       profile: {
         avatar: 'https://theme-plume.vuejs.press/plume.png',
-        name: 'Portofolio Ikimukti',
-        description: 'Portofolio Firmansyah Mukti Wijaya',
-        // circle: true,
-        // location: '',
-        // organization: '',
+        name: 'ikimukticom - Informasi Teknologi Terkini',
+        description: 'Pusat Pengetahuan untuk Produktivitas Digital',
+        circle: true,
+        location: 'Indonesia',
+        organization: 'ikimukti.com',
       },
 
       navbar: enNavbar,
@@ -73,12 +73,12 @@ export default defineThemeConfig({
        * 公告板
        * @see https://theme-plume.vuejs.press/guide/features/bulletin/
        */
-       // bulletin: {
-       //   layout: 'top-right',
-       //   contentType: 'markdown',
-       //   title: '',
-       //   content: '',
-       // },
+       bulletin: {
+         layout: 'top-right',
+         contentType: 'markdown',
+         title: 'Pengumuman',
+         content: 'Selamat datang di ikimukticom, pusat pengetahuan untuk produktivitas digital.',
+       },
     },
     '/zh/': {
       /**
@@ -86,11 +86,11 @@ export default defineThemeConfig({
        */
       profile: {
         avatar: 'https://theme-plume.vuejs.press/plume.png',
-        name: 'Portofolio Ikimukti',
-        description: 'Portofolio Firmansyah Mukti Wijaya',
-        // circle: true,
-        // location: '',
-        // organization: '',
+        name: 'ikimukticom - Informasi Teknologi Terkini',
+        description: 'Pusat Pengetahuan untuk Produktivitas Digital',
+        circle: true,
+        location: 'Indonesia',
+        organization: 'ikimukti.com',
       },
 
       navbar: zhNavbar,
@@ -100,12 +100,12 @@ export default defineThemeConfig({
        * 公告板
        * @see https://theme-plume.vuejs.press/guide/features/bulletin/
        */
-       // bulletin: {
-       //   layout: 'top-right',
-       //   contentType: 'markdown',
-       //   title: '',
-       //   content: '',
-       // },
+       bulletin: {
+         layout: 'top-right',
+         contentType: 'markdown',
+         title: '公告',
+         content: '欢迎来到 ikimukticom，数字生产力知识中心。',
+       },
     },
   },
 })

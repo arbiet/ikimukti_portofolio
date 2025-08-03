@@ -1,9 +1,8 @@
 {
-  "name": "portofolio-ikimukti",
+  "name": "ikimukticom",
   "type": "module",
   "version": "1.0.0",
-  "description": "Portofolio Firmansyah Mukti Wijaya",
-  "author": "ikimukti <iki.mukti@gmail.com>",
+  "description": "Pusat Pengetahuan untuk Produktivitas Digital",
   "license": "MIT",
   "engines": {
     "node": "^20.6.0 || >=22.0.0"
@@ -16,12 +15,21 @@
     "vp-update": "npx vp-update"
   },
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.23",
-    "vuepress": "2.0.0-rc.23",
-    "vuepress-theme-plume": "1.0.0-rc.151",
+    "@vuepress/bundler-vite": "2.0.0-rc.24",
     "http-server": "^14.1.1",
-    "vue": "^3.5.14",
-    "sass-embedded": "^1.89.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vue": "^3.5.17",
+    "vuepress": "2.0.0-rc.24",
+    "vuepress-theme-plume": "1.0.0-rc.159"
+  },
+  "dependencies": {
+    "@vuepress/shiki-twoslash": "^2.0.0-rc.112",
+    "artalk": "^2.9.1",
+    "artplayer": "^5.2.5",
+    "chart.js": "^4.5.0",
+    "echarts": "^5.6.0",
+    "flowchart.ts": "^3.0.1",
+    "mermaid": "^11.9.0",
+    "pyodide": "^0.28.0"
   }
 }

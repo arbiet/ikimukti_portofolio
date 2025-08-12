@@ -1,9 +1,58 @@
-# prevent Netlify npm install
+#====================================================================
+# Konfigurasi Netlify untuk Situs VuePress Profesional
+#====================================================================
 
+# Pengaturan build global yang diterapkan ke semua konteks deployment.
 [build]
-publish = "docs/.vuepress/dist"
-command = "npm run docs:build"
+  # Perintah untuk membangun situs. Ini harus cocok dengan skrip di package.json.
+  command = "npm run docs:build"
 
+  # Direktori output dari perintah build, relatif terhadap basis.
+  # Untuk VuePress, ini adalah direktori output standar.
+  publish = "docs/.vuepress/dist"
+
+  # Direktori tempat Netlify akan mencari fungsi serverless.
+  functions = "netlify/functions"
+
+# Variabel lingkungan yang diterapkan ke semua konteks build.
+# Merupakan praktik terbaik untuk mengunci versi Node.js Anda.
+# Ini juga dapat dilakukan dengan file.nvmrc, yang sering kali lebih disukai.
 [build.environment]
-NODE_VERSION = "22"
-NPM_FLAGS = "--version"
+  NODE_VERSION = "18"
+
+#====================================================================
+# Konteks Deployment: Sesuaikan build untuk lingkungan yang berbeda.
+#====================================================================
+
+# Konteks produksi (cabang utama Anda, mis., 'main' atau 'master')
+[context.production]
+  # Build produksi adalah standar. Tidak ada penimpaan yang diperlukan untuk situs sederhana.
+
+# Konteks Deploy Preview (untuk Pull/Merge Request)
+[context.deploy-preview]
+  # Anda dapat menggunakan perintah yang berbeda untuk pratinjau, mis., untuk membangun draf.
+  # command = "npm run docs:build"
+
+#====================================================================
+# Perutean dan Header
+#====================================================================
+
+# Aturan pengalihan untuk perutean Aplikasi Halaman Tunggal (SPA).
+# Ini memastikan bahwa navigasi langsung ke sub-halaman berfungsi dengan benar saat di-refresh.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Header kustom untuk keamanan dan kinerja.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Kebijakan Keamanan Konten dasar untuk meningkatkan keamanan.
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'"
+    # Mencegah situs dirender dalam iframe.
+    X-Frame-Options = "DENY"
+    # Mengaktifkan perlindungan XSS bawaan browser.
+    X-XSS-Protection = "1; mode=block"
+    # Mencegah browser menebak tipe konten.
+    X-Content-Type-Options = "nosniff"

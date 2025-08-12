@@ -23,21 +23,41 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills'
 
 // --- NEW HELPER ---
 // This robustly locates the pyodide package directory
-const pyodidePackageDir = dirname(fileURLToPath(import.meta.resolve("pyodide/package.json")));
+// const pyodideDir = dirname(fileURLToPath(import.meta.resolve('pyodide')));
 
 export default defineUserConfig({
   base: '/',
-  lang: 'en-US',
+  // lang: 'en-US',
   locales: {
     '/': {
       title: 'ikimukticom',
       lang: 'en-US',
-      description: 'Pusat Pengetahuan untuk Produktivitas Digital',
+      description: 'Knowledge Hub for Digital Productivity',
     },
     '/zh/': {
       title: 'ikimukticom',
       lang: 'zh-CN',
-      description: 'Pusat Pengetahuan untuk Produktivitas Digital',
+      description: '数字生产力知识中心',
+    },
+    '/de/': {
+      lang: 'de-DE',
+      title: 'ikimukticom',
+      description: 'Wissenszentrum für digitale Produktivität',
+    },
+    '/ru/': {
+      lang: 'ru-RU',
+      title: 'ikimukticom',
+      description: 'Центр знаний для цифровой продуктивности',
+    },
+    '/fr/': {
+      lang: 'fr-FR',
+      title: 'ikimukticom',
+      description: 'Centre de connaissances pour la productivité numérique',
+    },
+    '/ja/': {
+      lang: 'ja-JP',
+      title: 'ikimukticom',
+      description: 'デジタル生産性のための知識センター',
     },
   },
 
@@ -48,7 +68,7 @@ export default defineUserConfig({
   bundler: viteBundler({
     viteOptions: {
       optimizeDeps: {
-        exclude: ['pyodide'],
+        // exclude: ['pyodide'],
       },
     },
     vuePluginOptions: {},

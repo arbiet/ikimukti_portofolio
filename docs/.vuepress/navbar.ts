@@ -28,3 +28,14 @@ export const zhNavbar = defineNavbarConfig([
   },
 ])
 
+export const idNavbar = defineNavbarConfig([
+  { text: 'Beranda', link: '/id/' },
+  { text: 'Blog', link: '/id/blog/' },
+  { text: 'Tag', link: '/id/blog/tags/' },
+  { text: 'Arsip', link: '/id/blog/archives/' },
+  {
+    text: 'Catatan',
+    items: [{ text: 'Contoh', link: '/id/notes/demo/README.md' }]
+  },
+])
+

@@ -71,3 +71,19 @@ export const zhNotes = defineNotesConfig({
   notes: [zhDemoNote],
 })
 
+/* =================== locale:id-ID ======================= */
+
+const idDemoNote = defineNoteConfig({
+  dir: 'id/demo', // Arahkan ke folder demo di dalam `id`
+  link: '/id/demo',
+  sidebar: ['', 'foo', 'bar'],
+})
+
+/**
+ * Ekspor semua catatan untuk bahasa Indonesia
+ */
+export const idNotes = defineNotesConfig({
+  dir: 'id/notes',
+  link: '/id/',
+  notes: [idDemoNote],
+})

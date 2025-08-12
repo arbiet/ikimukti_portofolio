@@ -18,7 +18,7 @@
 # Merupakan praktik terbaik untuk mengunci versi Node.js Anda.
 # Ini juga dapat dilakukan dengan file.nvmrc, yang sering kali lebih disukai.
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "20"
 
 #====================================================================
 # Konteks Deployment: Sesuaikan build untuk lingkungan yang berbeda.

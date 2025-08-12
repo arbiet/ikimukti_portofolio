@@ -5,7 +5,8 @@ import NpmBadgeGroup from 'vuepress-theme-plume/features/NpmBadgeGroup.vue'
 import Swiper from 'vuepress-theme-plume/features/Swiper.vue'
 
 // import CustomComponent from './theme/components/Custom.vue'
-
+// import { Buffer } from 'buffer'
+// globalThis.Buffer = Buffer
 // import './theme/styles/custom.css'
 
 

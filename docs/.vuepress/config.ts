@@ -14,6 +14,17 @@ import { icon } from 'mermaid/dist/rendering-util/rendering-elements/shapes/icon
 import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
 
+
+// --- NEW IMPORTS ---
+import { viteStaticCopy } from 'vite-plugin-static-copy'
+import { dirname, join } from 'path'
+import { fileURLToPath } from 'url'
+import { nodePolyfills } from 'vite-plugin-node-polyfills'
+
+// --- NEW HELPER ---
+// This robustly locates the pyodide package directory
+const pyodidePackageDir = dirname(fileURLToPath(import.meta.resolve("pyodide/package.json")));
+
 export default defineUserConfig({
   base: '/',
   lang: 'en-US',
@@ -34,8 +45,14 @@ export default defineUserConfig({
     // 配置站点图标
     ['link', { rel: 'icon', type: 'image/png', href: 'https://theme-plume.vuejs.press/favicon-32x32.png' }],
   ],
-
-  bundler: viteBundler(),
+  bundler: viteBundler({
+    viteOptions: {
+      optimizeDeps: {
+        exclude: ['pyodide'],
+      },
+    },
+    vuePluginOptions: {},
+  }),
   shouldPrefetch: false, // 站点较大，页面数量较多时，不建议启用
 
   theme: plumeTheme({
@@ -59,7 +76,7 @@ export default defineUserConfig({
         }
       ]
     },
-    changelog: false,
+    changelog: true,
     profile: {
       name: 'ikimukticom',
       avatar: 'https://avatars.githubusercontent.com/u/148637550?s=400&u=d6caef1d3fd72971c8f1a3b2e31c048afbdfcb44&v=4',

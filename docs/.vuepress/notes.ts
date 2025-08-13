@@ -87,3 +87,71 @@ export const idNotes = defineNotesConfig({
   link: '/id/',
   notes: [idDemoNote],
 })
+
+
+// locale de
+/* =================== locale: de-DE ======================= */
+
+const deDemoNote = defineNoteConfig({
+  dir: 'de/demo',
+  link: '/de/demo',
+  sidebar: ['', 'foo', 'bar'],
+})
+
+/**
+ * Ekspor semua catatan untuk bahasa Jerman
+ */
+export const deNotes = defineNotesConfig({
+  dir: 'de/notes',
+  link: '/de/',
+  notes: [deDemoNote],
+})
+
+// locale ru
+const ruDemoNote = defineNoteConfig({
+  dir: 'ru/demo',
+  link: '/ru/demo',
+  sidebar: ['', 'foo', 'bar'],
+})
+
+/**
+ * Экспорт всех заметок для русского языка
+ */
+export const ruNotes = defineNotesConfig({
+  dir: 'ru/notes',
+  link: '/ru/',
+  notes: [ruDemoNote],
+})
+
+// locale fr
+const frDemoNote = defineNoteConfig({
+  dir: 'fr/demo',
+  link: '/fr/demo',
+  sidebar: ['', 'foo', 'bar'],
+})
+
+/**
+ * Export all notes for French language
+ */
+export const frNotes = defineNotesConfig({
+  dir: 'fr/notes',
+  link: '/fr/',
+  notes: [frDemoNote],
+})
+
+// locale ja
+
+const jaDemoNote = defineNoteConfig({
+  dir: 'ja/demo',
+  link: '/ja/demo',
+  sidebar: ['', 'foo', 'bar'],
+})
+
+/**
+ * 日本語のすべてのノートをエクスポートします
+ */
+export const jaNotes = defineNotesConfig({
+  dir: 'ja/notes',
+  link: '/ja/',
+  notes: [jaDemoNote],
+})

@@ -11,15 +11,15 @@
  */
 
 import { defineThemeConfig } from 'vuepress-theme-plume'
-import { enNavbar, zhNavbar, idNavbar } from './navbar'
-import { enNotes, zhNotes, idNotes } from './notes'
+import { enNavbar, zhNavbar, idNavbar, deNavbar, ruNavbar, frNavbar, jaNavbar } from './navbar'
+import { enNotes, zhNotes, idNotes, deNotes, ruNotes, frNotes, jaNotes } from './notes'
 
 
 /**
  * @see https://theme-plume.vuejs.press/config/basic/
  */
 export default defineThemeConfig({
-  logo: 'https://theme-plume.vuejs.press/plume.png',
+  logo: '/image/favicon-32x32.png',
 
   appearance: true,  // 配置 深色模式
 
@@ -54,18 +54,46 @@ export default defineThemeConfig({
   },
 
   locales: {
-    '/': {
+    '/en/': {
       /**
        * @see https://theme-plume.vuejs.press/config/basic/#profile
        */
       profile: {
-        avatar: 'https://theme-plume.vuejs.press/plume.png',
+        avatar: '/image/logo.png',
         name: 'ikimukticom - Latest Tech Insights',
         description: 'Knowledge Hub for Digital Productivity',
         circle: true,
         location: 'Indonesia',
         organization: 'ikimukti.com',
+        layout: 'right',
       },
+      social: [
+        // "discord" | "facebook" | "github" | "instagram" | "linkedin" | "mastodon" | "npm" | "slack" | "twitter" | "x" | "youtube" | "qq" | "weibo" | "bilibili" | "gitlab" | "docker" | "juejin" | "zhihu" | "douban" | "steam" | "stackoverflow" | "xbox";
+        { icon: 'github', link: 'https://github.com/ikimukticom' },
+        { icon: 'twitter', link: 'https://twitter.com/ikimukticom' },
+        { icon: 'facebook', link: 'https://facebook.com/ikimukticom' },
+        { icon: 'instagram', link: 'https://instagram.com/ikimukticom' },
+        { icon: 'linkedin', link: 'https://linkedin.com/company/ikimukticom' },
+        { icon: 'youtube', link: 'https://youtube.com/@ikimukticom' },
+        { icon: 'mastodon', link: 'https://mastodon.social/@ikimukticom' },
+        { icon: 'bilibili', link: 'https://space.bilibili.com/ikimukticom' },
+        { icon: 'discord', link: 'https://discord.gg/ikimukticom' },
+        { icon: 'slack', link: 'https://slack.com/ikimukticom' },
+        { icon: 'weibo', link: 'https://weibo.com/ikimukticom' },
+        { icon: 'qq', link: 'https://qq.com/ikimukticom' },
+        { icon: 'douban', link: 'https://douban.com/ikimukticom' },
+        { icon: 'zhihu', link: 'https://zhihu.com/ikimukticom' },
+        { icon: 'gitlab', link: 'https://gitlab.com/ikimukticom' },
+        { icon: 'docker', link: 'https://hub.docker.com/u/ikimukticom' },
+        { icon: 'juejin', link: 'https://juejin.cn/user/ikimukticom' },
+        { icon: 'stackoverflow', link: 'https://stackoverflow.com/users/ikimukticom' },
+        { icon: 'steam', link: 'https://steamcommunity.com/id/ikimukticom' },
+        { icon: 'xbox', link: 'https://xbox.com/profile/ikimukticom' },
+        { icon: 'npm', link: 'https://www.npmjs.com/~ikimukticom' },
+        { icon: 'slack', link: 'https://slack.com/ikimukticom' },
+        { icon: 'zhihu', link: 'https://zhihu.com/ikimukticom' },
+        { icon: 'douban', link: 'https://douban.com/ikimukticom' },
+      ],
 
       navbar: enNavbar,
       notes: enNotes,
@@ -81,18 +109,101 @@ export default defineThemeConfig({
          content: 'Welcome to ikimukticom, the knowledge hub for digital productivity.',
        },
     },
+    '/': {
+      /**
+       * @see https://theme-plume.vuejs.press/config/basic/#profile
+       */
+      profile: {
+        avatar: '/image/logo.png',
+        name: 'ikimukticom - Pusat Pengetahuan untuk Produktivitas Digital',
+        description: 'Pusat Pengetahuan untuk Produktivitas Digital',
+        circle: true,
+        location: 'Indonesia',
+        organization: 'ikimukti.com',
+        layout: 'right',
+      },
+      social: [
+        // "discord" | "facebook" | "github" | "instagram" | "linkedin" | "mastodon" | "npm" | "slack" | "twitter" | "x" | "youtube" | "qq" | "weibo" | "bilibili" | "gitlab" | "docker" | "juejin" | "zhihu" | "douban" | "steam" | "stackoverflow" | "xbox";
+        { icon: 'github', link: 'https://github.com/ikimukticom' },
+        { icon: 'twitter', link: 'https://twitter.com/ikimukticom' },
+        { icon: 'facebook', link: 'https://facebook.com/ikimukticom' },
+        { icon: 'instagram', link: 'https://instagram.com/ikimukticom' },
+        { icon: 'linkedin', link: 'https://linkedin.com/company/ikimukticom' },
+        { icon: 'youtube', link: 'https://youtube.com/@ikimukticom' },
+        { icon: 'mastodon', link: 'https://mastodon.social/@ikimukticom' },
+        { icon: 'bilibili', link: 'https://space.bilibili.com/ikimukticom' },
+        { icon: 'discord', link: 'https://discord.gg/ikimukticom' },
+        { icon: 'slack', link: 'https://slack.com/ikimukticom' },
+        { icon: 'weibo', link: 'https://weibo.com/ikimukticom' },
+        { icon: 'qq', link: 'https://qq.com/ikimukticom' },
+        { icon: 'douban', link: 'https://douban.com/ikimukticom' },
+        { icon: 'zhihu', link: 'https://zhihu.com/ikimukticom' },
+        { icon: 'gitlab', link: 'https://gitlab.com/ikimukticom' },
+        { icon: 'docker', link: 'https://hub.docker.com/u/ikimukticom' },
+        { icon: 'juejin', link: 'https://juejin.cn/user/ikimukticom' },
+        { icon: 'stackoverflow', link: 'https://stackoverflow.com/users/ikimukticom' },
+        { icon: 'steam', link: 'https://steamcommunity.com/id/ikimukticom' },
+        { icon: 'xbox', link: 'https://xbox.com/profile/ikimukticom' },
+        { icon: 'npm', link: 'https://www.npmjs.com/~ikimukticom' },
+        { icon: 'slack', link: 'https://slack.com/ikimukticom' },
+        { icon: 'zhihu', link: 'https://zhihu.com/ikimukticom' },
+        { icon: 'douban', link: 'https://douban.com/ikimukticom' },
+      ],
+
+      navbar: enNavbar,
+      notes: enNotes,
+
+      /**
+       * 公告板
+       * @see https://theme-plume.vuejs.press/guide/features/bulletin/
+       */
+       bulletin: {
+         layout: 'top-right',
+         contentType: 'markdown',
+         title: 'Pengumuman',
+         content: 'Selamat datang di ikimukticom, pusat pengetahuan untuk produktivitas digital.',
+       },
+    },
     '/zh/': { // 中文配置
       /**
        * @see https://theme-plume.vuejs.press/config/basic/#profile
        */
       profile: {
-        avatar: 'https://theme-plume.vuejs.press/plume.png',
+        avatar: '/image/logo.png',
         name: 'ikimukticom - 最新科技洞察',
         description: '数字生产力知识中心',
         circle: true,
         location: '印度尼西亚',
         organization: 'ikimukti.com',
+        layout: 'right',
       },
+
+      social: [
+        { icon: 'github', link: 'https://github.com/ikimukticom' },
+        { icon: 'twitter', link: 'https://twitter.com/ikimukticom' },
+        { icon: 'facebook', link: 'https://facebook.com/ikimukticom' },
+        { icon: 'instagram', link: 'https://instagram.com/ikimukticom' },
+        { icon: 'linkedin', link: 'https://linkedin.com/company/ikimukticom' },
+        { icon: 'youtube', link: 'https://youtube.com/@ikimukticom' },
+        { icon: 'mastodon', link: 'https://mastodon.social/@ikimukticom' },
+        { icon: 'bilibili', link: 'https://space.bilibili.com/ikimukticom' },
+        { icon: 'discord', link: 'https://discord.gg/ikimukticom' },
+        { icon: 'slack', link: 'https://slack.com/ikimukticom' },
+        { icon: 'weibo', link: 'https://weibo.com/ikimukticom' },
+        { icon: 'qq', link: 'https://qq.com/ikimukticom' },
+        { icon: 'douban', link: 'https://douban.com/ikimukticom' },
+        { icon: 'zhihu', link: 'https://zhihu.com/ikimukticom' },
+        { icon: 'gitlab', link: 'https://gitlab.com/ikimukticom' },
+        { icon: 'docker', link: 'https://hub.docker.com/u/ikimukticom' },
+        { icon: 'juejin', link: 'https://juejin.cn/user/ikimukticom' },
+        { icon: 'stackoverflow', link: 'https://stackoverflow.com/users/ikimukticom' },
+        { icon: 'steam', link: 'https://steamcommunity.com/id/ikimukticom' },
+        { icon: 'xbox', link: 'https://xbox.com/profile/ikimukticom' },
+        { icon: 'npm', link: 'https://www.npmjs.com/~ikimukticom' },
+        { icon: 'slack', link: 'https://slack.com/ikimukticom' },
+        { icon: 'zhihu', link: 'https://zhihu.com/ikimukticom' },
+        { icon: 'douban', link: 'https://douban.com/ikimukticom' },
+      ],
 
       navbar: zhNavbar,
       notes: zhNotes,
@@ -110,13 +221,41 @@ export default defineThemeConfig({
     },
     '/id/': {
       profile: {
-        avatar: 'https://theme-plume.vuejs.press/plume.png',
+        avatar: '/image/logo.png',
         name: 'ikimukticom - Informasi Teknologi Terkini',
         description: 'Pusat Pengetahuan untuk Produktivitas Digital',
         circle: true,
         location: 'Indonesia',
         organization: 'ikimukti.com',
       },
+
+      social: [
+        { icon: 'github', link: 'https://github.com/ikimukticom' },
+        { icon: 'twitter', link: 'https://twitter.com/ikimukticom' },
+        { icon: 'facebook', link: 'https://facebook.com/ikimukticom' },
+        { icon: 'instagram', link: 'https://instagram.com/ikimukticom' },
+        { icon: 'linkedin', link: 'https://linkedin.com/company/ikimukticom' },
+        { icon: 'youtube', link: 'https://youtube.com/@ikimukticom' },
+        { icon: 'mastodon', link: 'https://mastodon.social/@ikimukticom' },
+        { icon: 'bilibili', link: 'https://space.bilibili.com/ikimukticom' },
+        { icon: 'discord', link: 'https://discord.gg/ikimukticom' },
+        { icon: 'slack', link: 'https://slack.com/ikimukticom' },
+        { icon: 'weibo', link: 'https://weibo.com/ikimukticom' },
+        { icon: 'qq', link: 'https://qq.com/ikimukticom' },
+        { icon: 'douban', link: 'https://douban.com/ikimukticom' },
+        { icon: 'zhihu', link: 'https://zhihu.com/ikimukticom' },
+        { icon: 'gitlab', link: 'https://gitlab.com/ikimukticom' },
+        { icon: 'docker', link: 'https://hub.docker.com/u/ikimukticom' },
+        { icon: 'juejin', link: 'https://juejin.cn/user/ikimukticom' },
+        { icon: 'stackoverflow', link: 'https://stackoverflow.com/users/ikimukticom' },
+        { icon: 'steam', link: 'https://steamcommunity.com/id/ikimukticom' },
+        { icon: 'xbox', link: 'https://xbox.com/profile/ikimukticom' },
+        { icon: 'npm', link: 'https://www.npmjs.com/~ikimukticom' },
+        { icon: 'slack', link: 'https://slack.com/ikimukticom' },
+        { icon: 'zhihu', link: 'https://zhihu.com/ikimukticom' },
+        { icon: 'douban', link: 'https://douban.com/ikimukticom' },
+      ],
+
       navbar: idNavbar,
       notes: idNotes,
        bulletin: {
@@ -125,6 +264,182 @@ export default defineThemeConfig({
          title: 'Pengumuman',
          content: 'Selamat datang di ikimukticom, pusat pengetahuan untuk produktivitas digital.',
        },
+    },
+    '/de/': {
+      profile: {
+        avatar: '/image/logo.png',
+        name: 'ikimukticom - Aktuelle Informationstechnologie',
+        description: 'Zentrum für Wissen über digitale Produktivität',
+        circle: true,
+        location: 'Deutschland',
+        organization: 'ikimukti.com',
+      },
+
+      social: [
+        { icon: 'github', link: 'https://github.com/ikimukticom' },
+        { icon: 'twitter', link: 'https://twitter.com/ikimukticom' },
+        { icon: 'facebook', link: 'https://facebook.com/ikimukticom' },
+        { icon: 'instagram', link: 'https://instagram.com/ikimukticom' },
+        { icon: 'linkedin', link: 'https://linkedin.com/company/ikimukticom' },
+        { icon: 'youtube', link: 'https://youtube.com/@ikimukticom' },
+        { icon: 'mastodon', link: 'https://mastodon.social/@ikimukticom' },
+        { icon: 'bilibili', link: 'https://space.bilibili.com/ikimukticom' },
+        { icon: 'discord', link: 'https://discord.gg/ikimukticom' },
+        { icon: 'slack', link: 'https://slack.com/ikimukticom' },
+        { icon: 'weibo', link: 'https://weibo.com/ikimukticom' },
+        { icon: 'qq', link: 'https://qq.com/ikimukticom' },
+        { icon: 'douban', link: 'https://douban.com/ikimukticom' },
+        { icon: 'zhihu', link: 'https://zhihu.com/ikimukticom' },
+        { icon: 'gitlab', link: 'https://gitlab.com/ikimukticom' },
+        { icon: 'docker', link: 'https://hub.docker.com/u/ikimukticom' },
+        { icon: 'juejin', link: 'https://juejin.cn/user/ikimukticom' },
+        { icon: 'stackoverflow', link: 'https://stackoverflow.com/users/ikimukticom' },
+        { icon: 'steam', link: 'https://steamcommunity.com/id/ikimukticom' },
+        { icon: 'xbox', link: 'https://xbox.com/profile/ikimukticom' },
+        { icon: 'npm', link: 'https://www.npmjs.com/~ikimukticom' },
+      ],
+
+      navbar: deNavbar,
+      notes: deNotes,
+
+      bulletin: {
+        layout: 'top-right',
+        contentType: 'markdown',
+        title: 'Ankündigung',
+        content: 'Willkommen bei ikimukticom, dem Wissenszentrum für digitale Produktivität.',
+      },
+    },
+    '/ru/': {
+      profile: {
+        avatar: '/image/logo.png',
+        name: 'ikimukticom - Актуальные информационные технологии',
+        description: 'Центр знаний о цифровой продуктивности',
+        circle: true,
+        location: 'Россия',
+        organization: 'ikimukti.com',
+      },
+
+      social: [
+        { icon: 'github', link: 'https://github.com/ikimukticom' },
+        { icon: 'twitter', link: 'https://twitter.com/ikimukticom' },
+        { icon: 'facebook', link: 'https://facebook.com/ikimukticom' },
+        { icon: 'instagram', link: 'https://instagram.com/ikimukticom' },
+        { icon: 'linkedin', link: 'https://linkedin.com/company/ikimukticom' },
+        { icon: 'youtube', link: 'https://youtube.com/@ikimukticom' },
+        { icon: 'mastodon', link: 'https://mastodon.social/@ikimukticom' },
+        { icon: 'bilibili', link: 'https://space.bilibili.com/ikimukticom' },
+        { icon: 'discord', link: 'https://discord.gg/ikimukticom' },
+        { icon: 'slack', link: 'https://slack.com/ikimukticom' },
+        { icon: 'weibo', link: 'https://weibo.com/ikimukticom' },
+        { icon: 'qq', link: 'https://qq.com/ikimukticom' },
+        { icon: 'douban', link: 'https://douban.com/ikimukticom' },
+        { icon: 'zhihu', link: 'https://zhihu.com/ikimukticom' },
+        { icon: 'gitlab', link: 'https://gitlab.com/ikimukticom' },
+        { icon: 'docker', link: 'https://hub.docker.com/u/ikimukticom' },
+        { icon: 'juejin', link: 'https://juejin.cn/user/ikimukticom' },
+        { icon: 'stackoverflow', link: 'https://stackoverflow.com/users/ikimukticom' },
+        { icon: 'steam', link: 'https://steamcommunity.com/id/ikimukticom' },
+        { icon: 'xbox', link: 'https://xbox.com/profile/ikimukticom' },
+        { icon: 'npm', link: 'https://www.npmjs.com/~ikimukticom' },
+      ],
+
+      navbar: ruNavbar,
+      notes: ruNotes,
+
+      bulletin: {
+        layout: 'top-right',
+        contentType: 'markdown',
+        title: 'Объявление',
+        content: 'Добро пожаловать в ikimukticom, центр знаний о цифровой продуктивности.',
+      },
+    },
+    '/fr/': {
+      profile: {
+        avatar: '/image/logo.png',
+        name: 'ikimukticom - Technologies de l\'information actuelles',
+        description: 'Centre de connaissances sur la productivité numérique',
+        circle: true,
+        location: 'France',
+        organization: 'ikimukti.com',
+      },
+
+      social: [
+        { icon: 'github', link: 'https://github.com/ikimukticom' },
+        { icon: 'twitter', link: 'https://twitter.com/ikimukticom' },
+        { icon: 'facebook', link: 'https://facebook.com/ikimukticom' },
+        { icon: 'instagram', link: 'https://instagram.com/ikimukticom' },
+        { icon: 'linkedin', link: 'https://linkedin.com/company/ikimukticom' },
+        { icon: 'youtube', link: 'https://youtube.com/@ikimukticom' },
+        { icon: 'mastodon', link: 'https://mastodon.social/@ikimukticom' },
+        { icon: 'bilibili', link: 'https://space.bilibili.com/ikimukticom' },
+        { icon: 'discord', link: 'https://discord.gg/ikimukticom' },
+        { icon: 'slack', link: 'https://slack.com/ikimukticom' },
+        { icon: 'weibo', link: 'https://weibo.com/ikimukticom' },
+        { icon: 'qq', link: 'https://qq.com/ikimukticom' },
+        { icon: 'douban', link: 'https://douban.com/ikimukticom' },
+        { icon: 'zhihu', link: 'https://zhihu.com/ikimukticom' },
+        { icon: 'gitlab', link: 'https://gitlab.com/ikimukticom' },
+        { icon: 'docker', link: 'https://hub.docker.com/u/ikimukticom' },
+        { icon: 'juejin', link: 'https://juejin.cn/user/ikimukticom' },
+        { icon: 'stackoverflow', link: 'https://stackoverflow.com/users/ikimukticom' },
+        { icon: 'steam', link: 'https://steamcommunity.com/id/ikimukticom' },
+        { icon: 'xbox', link: 'https://xbox.com/profile/ikimukticom' },
+        { icon: 'npm', link: 'https://www.npmjs.com/~ikimukticom' },
+      ],
+
+      navbar: frNavbar,
+      notes: frNotes,
+
+      bulletin: {
+        layout: 'top-right',
+        contentType: 'markdown',
+        title: 'Annonce',
+        content: 'Bienvenue sur ikimukticom, le centre de connaissances sur la productivité numérique.',
+      },
+    },
+    '/ja/': {
+      profile: {
+        avatar: '/image/logo.png',
+        name: 'ikimukticom - 現代情報技術',
+        description: 'デジタル生産性に関する知識の中心',
+        circle: true,
+        location: '日本',
+        organization: 'ikimukti.com',
+      },
+
+      social: [
+        { icon: 'github', link: 'https://github.com/ikimukticom' },
+        { icon: 'twitter', link: 'https://twitter.com/ikimukticom' },
+        { icon: 'facebook', link: 'https://facebook.com/ikimukticom' },
+        { icon: 'instagram', link: 'https://instagram.com/ikimukticom' },
+        { icon: 'linkedin', link: 'https://linkedin.com/company/ikimukticom' },
+        { icon: 'youtube', link: 'https://youtube.com/@ikimukticom' },
+        { icon: 'mastodon', link: 'https://mastodon.social/@ikimukticom' },
+        { icon: 'bilibili', link: 'https://space.bilibili.com/ikimukticom' },
+        { icon: 'discord', link: 'https://discord.gg/ikimukticom' },
+        { icon: 'slack', link: 'https://slack.com/ikimukticom' },
+        { icon: 'weibo', link: 'https://weibo.com/ikimukticom' },
+        { icon: 'qq', link: 'https://qq.com/ikimukticom' },
+        { icon: 'douban', link: 'https://douban.com/ikimukticom' },
+        { icon: 'zhihu', link: 'https://zhihu.com/ikimukticom' },
+        { icon: 'gitlab', link: 'https://gitlab.com/ikimukticom' },
+        { icon: 'docker', link: 'https://hub.docker.com/u/ikimukticom' },
+        { icon: 'juejin', link: 'https://juejin.cn/user/ikimukticom' },
+        { icon: 'stackoverflow', link: 'https://stackoverflow.com/users/ikimukticom' },
+        { icon: 'steam', link: 'https://steamcommunity.com/id/ikimukticom' },
+        { icon: 'xbox', link: 'https://xbox.com/profile/ikimukticom' },
+        { icon: 'npm', link: 'https://www.npmjs.com/~ikimukticom' },
+      ],
+
+      navbar: jaNavbar,
+      notes: jaNotes,
+
+      bulletin: {
+        layout: 'top-right',
+        contentType: 'markdown',
+        title: 'お知らせ',
+        content: 'ikimukticomへようこそ、デジタル生産性に関する知識の中心です。',
+      },
     },
   },
 })

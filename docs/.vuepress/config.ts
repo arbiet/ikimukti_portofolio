@@ -27,12 +27,12 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills'
 
 export default defineUserConfig({
   base: '/',
-  // lang: 'en-US',
+  lang: 'en-US',
   locales: {
     '/': {
       title: 'ikimukticom',
       lang: 'en-US',
-      description: 'Knowledge Hub for Digital Productivity',
+      description: 'Pusat Pengetahuan untuk Produktivitas Digital',
     },
     '/zh/': {
       title: 'ikimukticom',
@@ -63,7 +63,7 @@ export default defineUserConfig({
 
   head: [
     // 配置站点图标
-    ['link', { rel: 'icon', type: 'image/png', href: 'https://theme-plume.vuejs.press/favicon-32x32.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/image/favicon-32x32.png' }],
   ],
   bundler: viteBundler({
     viteOptions: {
@@ -191,7 +191,7 @@ export default defineUserConfig({
           ...ogp,
           title: page.frontmatter.title || 'Ikimukti.com - Pusat Pengetahuan untuk Produktivitas Digital',
           description: page.frontmatter.description || 'Ikimukti.com adalah pusat pengetahuan untuk produktivitas digital. Temukan artikel, tutorial, dan tips terbaru tentang teknologi, produktivitas, dan inovasi digital.',
-          image: `https://ikimukti.com${page.frontmatter.image || '/default-og-image.png'}`,
+          image: `https://ikimukti.com${page.frontmatter.image || '/favicon-32x32.png'}`,
           type: 'website',
           url: `https://ikimukti.com${page.path}`,
         }),
@@ -204,7 +204,7 @@ export default defineUserConfig({
           url: `https://ikimukti.com${page.path}`,
           image: {
             '@type': 'ImageObject',
-            url: `https://ikimukti.com${page.frontmatter.image || '/default-og-image.png'}`,
+            url: `https://ikimukti.com${page.frontmatter.image || '/favicon-32x32.png'}`,
             width: 1200,
             height: 630,
           },

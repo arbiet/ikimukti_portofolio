@@ -399,5 +399,40 @@ export default defineUserConfig({
      * @see https://theme-plume.vuejs.press/guide/features/encryption/
      */
     // encrypt: {},
+    appearance: "dark",
+    copyCode: {
+      duration: 300,
+      ignoreSelector: ['pre', 'code'],
+      inline: true,
+      locales: {
+        '/': {
+          copy: 'Copy',
+        },
+        '/zh/': {
+          copy: '复制',
+        },
+        '/de/': {
+          copy: 'Kopieren',
+        },
+        '/ru/': {
+          copy: 'Копировать',
+        },
+        '/fr/': {
+          copy: 'Copier',
+        },
+        '/ja/': {
+          copy: 'コピー',
+        },
+      },
+      showInMobile: true
+    },
+    createTime: true, // 是否启用创建时间
+    darkModeSwitchTitle: 'Switch to Dark Mode',
+    transition: {
+      appearance: "horizontal-clip", // 过渡效果，'fade' | 'slide' | 'horizontal-clip' | 'vertical-clip'
+      page: true, // 是否启用页面过渡
+      postList: true, // 是否启用文章列表过渡
+    },
+    returnToTopLabel: 'To Top',
   }),
 })

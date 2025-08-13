@@ -2,8 +2,34 @@
   "name": "ikimukticom",
   "type": "module",
   "version": "1.0.0",
+  "private": true,
   "description": "Pusat Pengetahuan untuk Produktivitas Digital",
+  "author": "Ikimukti <info@ikimukti.com> (https://ikimukti.com)",
+  "contributors": [
+    "Ikimukti <info@ikimukti.com> (https://ikimukti.com)"
+  ],
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/arbiet"
+  },
   "license": "MIT",
+  "homepage": "https://ikimukti.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arbiet/ikimukti_portofolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arbiet/ikimukti_portofolio/issues"
+  },
+  "keywords": [
+    "vuepress",
+    "vuepress-theme-plume",
+    "blog",
+    "docs",
+    "digital-productivity",
+    "ikimukti"
+  ],
+  "packageManager": "npm@10.8.1",
   "engines": {
     "node": "^20.6.0 || >=22.0.0"
   },

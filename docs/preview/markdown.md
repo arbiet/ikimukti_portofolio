@@ -1,9 +1,30 @@
 ---
 title: Markdown
-tags:
-  - markdown
 createTime: 2025/08/03 23:10:52
 permalink: /article/7phxj1n7/
+icon: article
+cover: /image/cover.png
+category:
+  - Documentation
+  - Guides
+  - Tutorials
+  - Best Practices
+tags:
+  - markdown
+  - syntax
+  - formatting
+index: true
+author:
+  - name: "Firmansyah Mukti Wijaya"
+    email: "ikimukti@gmail.com"
+    url: "https://ikimukti.com"
+  - name: "Ikimukti"
+    email: "info@ikimukti.com"
+    url: "https://ikimukti.com"
+lang: en-US
+sticky: true
+draft: false
+excerpt: "Learn the basics of Markdown syntax and formatting. With Markdown, you can easily format your text, create lists, add images, and more."
 ---
 
 ## Heading 2

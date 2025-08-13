@@ -54,7 +54,7 @@ export default defineThemeConfig({
   },
 
   locales: {
-    '/en/': {
+    '/': {
       /**
        * @see https://theme-plume.vuejs.press/config/basic/#profile
        */
@@ -108,61 +108,11 @@ export default defineThemeConfig({
          title: 'Announcement',
          content: 'Welcome to ikimukticom, the knowledge hub for digital productivity.',
        },
-    },
-    '/': {
-      /**
-       * @see https://theme-plume.vuejs.press/config/basic/#profile
-       */
-      profile: {
-        avatar: '/image/logo.png',
-        name: 'ikimukticom - Pusat Pengetahuan untuk Produktivitas Digital',
-        description: 'Pusat Pengetahuan untuk Produktivitas Digital',
-        circle: true,
-        location: 'Indonesia',
-        organization: 'ikimukti.com',
-        layout: 'right',
-      },
-      social: [
-        // "discord" | "facebook" | "github" | "instagram" | "linkedin" | "mastodon" | "npm" | "slack" | "twitter" | "x" | "youtube" | "qq" | "weibo" | "bilibili" | "gitlab" | "docker" | "juejin" | "zhihu" | "douban" | "steam" | "stackoverflow" | "xbox";
-        { icon: 'github', link: 'https://github.com/ikimukticom' },
-        { icon: 'twitter', link: 'https://twitter.com/ikimukticom' },
-        { icon: 'facebook', link: 'https://facebook.com/ikimukticom' },
-        { icon: 'instagram', link: 'https://instagram.com/ikimukticom' },
-        { icon: 'linkedin', link: 'https://linkedin.com/company/ikimukticom' },
-        { icon: 'youtube', link: 'https://youtube.com/@ikimukticom' },
-        { icon: 'mastodon', link: 'https://mastodon.social/@ikimukticom' },
-        { icon: 'bilibili', link: 'https://space.bilibili.com/ikimukticom' },
-        { icon: 'discord', link: 'https://discord.gg/ikimukticom' },
-        { icon: 'slack', link: 'https://slack.com/ikimukticom' },
-        { icon: 'weibo', link: 'https://weibo.com/ikimukticom' },
-        { icon: 'qq', link: 'https://qq.com/ikimukticom' },
-        { icon: 'douban', link: 'https://douban.com/ikimukticom' },
-        { icon: 'zhihu', link: 'https://zhihu.com/ikimukticom' },
-        { icon: 'gitlab', link: 'https://gitlab.com/ikimukticom' },
-        { icon: 'docker', link: 'https://hub.docker.com/u/ikimukticom' },
-        { icon: 'juejin', link: 'https://juejin.cn/user/ikimukticom' },
-        { icon: 'stackoverflow', link: 'https://stackoverflow.com/users/ikimukticom' },
-        { icon: 'steam', link: 'https://steamcommunity.com/id/ikimukticom' },
-        { icon: 'xbox', link: 'https://xbox.com/profile/ikimukticom' },
-        { icon: 'npm', link: 'https://www.npmjs.com/~ikimukticom' },
-        { icon: 'slack', link: 'https://slack.com/ikimukticom' },
-        { icon: 'zhihu', link: 'https://zhihu.com/ikimukticom' },
-        { icon: 'douban', link: 'https://douban.com/ikimukticom' },
-      ],
 
-      navbar: enNavbar,
-      notes: enNotes,
-
-      /**
-       * 公告板
-       * @see https://theme-plume.vuejs.press/guide/features/bulletin/
-       */
-       bulletin: {
-         layout: 'top-right',
-         contentType: 'markdown',
-         title: 'Pengumuman',
-         content: 'Selamat datang di ikimukticom, pusat pengetahuan untuk produktivitas digital.',
-       },
+      footer: {
+        message: 'Ikimukti.com - Knowledge Hub for Digital Productivity',
+        copyright: 'Copyright © 2025 Ikimukti.com. All rights reserved.'
+      }
     },
     '/zh/': { // 中文配置
       /**
@@ -218,6 +168,11 @@ export default defineThemeConfig({
          title: '公告',
          content: '欢迎来到 ikimukticom，数字生产力知识中心。',
        },
+       // zh footer
+       footer: {
+         message: 'Ikimukti.com - 数字生产力知识中心',
+         copyright: 'Copyright © 2025 Ikimukti.com. All rights reserved.'
+       },
     },
     '/id/': {
       profile: {
@@ -264,6 +219,11 @@ export default defineThemeConfig({
          title: 'Pengumuman',
          content: 'Selamat datang di ikimukticom, pusat pengetahuan untuk produktivitas digital.',
        },
+
+       footer: {
+         message: 'Ikimukti.com - Pusat Pengetahuan untuk Produktivitas Digital',
+         copyright: 'Copyright © 2025 Ikimukti.com. All rights reserved.'
+       }
     },
     '/de/': {
       profile: {
@@ -308,6 +268,11 @@ export default defineThemeConfig({
         title: 'Ankündigung',
         content: 'Willkommen bei ikimukticom, dem Wissenszentrum für digitale Produktivität.',
       },
+
+      footer: {
+        message: 'Ikimukti.com - Портал знаний о цифровой продуктивности',
+        copyright: 'Copyright © 2025 Ikimukti.com. Все права защищены.'
+      }
     },
     '/ru/': {
       profile: {
@@ -352,6 +317,11 @@ export default defineThemeConfig({
         title: 'Объявление',
         content: 'Добро пожаловать в ikimukticom, центр знаний о цифровой продуктивности.',
       },
+
+      footer: {
+        message: 'Ikimukti.com - Портал знаний о цифровой продуктивности',
+        copyright: 'Copyright © 2025 Ikimukti.com. Все права защищены.'
+      }
     },
     '/fr/': {
       profile: {
@@ -396,6 +366,11 @@ export default defineThemeConfig({
         title: 'Annonce',
         content: 'Bienvenue sur ikimukticom, le centre de connaissances sur la productivité numérique.',
       },
+
+      footer: {
+        message: 'Ikimukti.com - Centre de connaissances sur la productivité numérique',
+        copyright: 'Copyright © 2025 Ikimukti.com. Tous droits réservés.'
+      }
     },
     '/ja/': {
       profile: {
@@ -440,6 +415,11 @@ export default defineThemeConfig({
         title: 'お知らせ',
         content: 'ikimukticomへようこそ、デジタル生産性に関する知識の中心です。',
       },
+
+      footer: {
+        message: 'Ikimukti.com - 現代情報技術に関する知識の中心',
+        copyright: 'Copyright © 2025 Ikimukti.com. 全著作権所有。'
+      }
     },
   },
 })

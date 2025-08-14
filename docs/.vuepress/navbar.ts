@@ -1,210 +1,188 @@
 /**
- * @see https://theme-plume.vuejs.press/config/navigation/ 查看文档了解配置详情
+ * @see https://theme-plume.vuejs.press/config/navigation/ for more details.
  *
- * Navbar 配置文件，它在 `.vuepress/plume.config.ts` 中被导入。
+ * Navbar configuration file, imported in `.vuepress/plume.config.ts`.
  */
 
 import { defineNavbarConfig } from 'vuepress-theme-plume'
 
-export const enNavbar = defineNavbarConfig([
-  { text: 'Home', link: '/'},
-  { text: 'Blog', link: '/blog/' },
-  { text: 'News', link: '/news/' },
-  { text: 'Tutorial', link: '/tutorial/' },
-  {
-    text: 'Main Topics',
-    items: [
-      { text: 'Artificial Intelligence', link: '/topics/artificial-intelligence/' },
-      { text: 'Cryptography and Blockchain', link: '/topics/cryptography-and-blockchain/' },
-      { text: 'Software Development', link: '/topics/software-development/' },
-      { text: 'Infrastructure Digital (Server and Network)', link: '/topics/infrastructure-digital-server-and-network/' },
-      { text: 'Data Science', link: '/topics/data-science/' },
-      { text: 'Security', link: '/topics/security/' }
-    ]
+// Object to hold all translations
+const translations = {
+  en: {
+    home: 'Home',
+    blog: 'Blog',
+    news: 'News',
+    tutorial: 'Tutorial',
+    mainTopics: 'Main Topics',
+    ai: 'Artificial Intelligence',
+    crypto: 'Cryptography and Blockchain',
+    dev: 'Software Development',
+    infra: 'Infrastructure Digital (Server and Network)',
+    data: 'Data Science',
+    security: 'Security',
+    learningPaths: 'Learning Paths',
+    aiEveryone: 'AI for Everyone',
+    blockchainBasics: 'Blockchain Basics',
+    dataFundamentals: 'Data Science Fundamentals',
+    cyberEssentials: 'Cybersecurity Essentials',
+    glossary: 'Glosarium',
   },
-  {
-    text: 'Learning Paths',
-    items: [
-      { text: 'AI for Everyone', link: '/learning-paths/ai-for-everyone/' },
-      { text: 'Blockchain Basics', link: '/learning-paths/blockchain-basics/' },
-      { text: 'Software Development', link: '/learning-paths/software-development/' },
-      { text: 'Data Science Fundamentals', link: '/learning-paths/data-science-fundamentals/' },
-      { text: 'Cybersecurity Essentials', link: '/learning-paths/cybersecurity-essentials/' }
-    ]
+  zh: {
+    home: '首页',
+    blog: '博客',
+    news: '新闻',
+    tutorial: '教程',
+    mainTopics: '主要主题',
+    ai: '人工智能',
+    crypto: '密码学与区块链',
+    dev: '软件开发',
+    infra: '基础设施数字化（服务器和网络）',
+    data: '数据科学',
+    security: '安全',
+    learningPaths: '学习路径',
+    aiEveryone: '人人都能学的人工智能',
+    blockchainBasics: '区块链基础',
+    dataFundamentals: '数据科学基础',
+    cyberEssentials: '网络安全基础',
+    glossary: '术语表',
   },
-  { text: 'Glosarium', link: '/glossary/' },
-])
+  id: {
+    home: 'Beranda',
+    blog: 'Blog',
+    news: 'Berita',
+    tutorial: 'Tutorial',
+    mainTopics: 'Topik Utama',
+    ai: 'Kecerdasan Buatan',
+    crypto: 'Kriptografi dan Blockchain',
+    dev: 'Pengembangan Perangkat Lunak',
+    infra: 'Infrastruktur Digital (Server dan Jaringan)',
+    data: 'Ilmu Data',
+    security: 'Keamanan',
+    learningPaths: 'Jalur Pembelajaran',
+    aiEveryone: 'AI untuk Semua',
+    blockchainBasics: 'Dasar-dasar Blockchain',
+    dataFundamentals: 'Dasar-dasar Ilmu Data',
+    cyberEssentials: 'Dasar-dasar Keamanan Siber',
+    glossary: 'Glosarium',
+  },
+  de: {
+    home: 'Startseite',
+    blog: 'Blog',
+    news: 'Nachrichten',
+    tutorial: 'Tutorials',
+    mainTopics: 'Hauptthemen',
+    ai: 'Künstliche Intelligenz',
+    crypto: 'Kryptographie und Blockchain',
+    dev: 'Softwareentwicklung',
+    infra: 'Digitale Infrastruktur (Server und Netzwerk)',
+    data: 'Datenwissenschaft',
+    security: 'Sicherheit',
+    learningPaths: 'Lernpfade',
+    aiEveryone: 'KI für alle',
+    blockchainBasics: 'Blockchain-Grundlagen',
+    dataFundamentals: 'Grundlagen der Datenwissenschaft',
+    cyberEssentials: 'Grundlagen der Cybersicherheit',
+    glossary: 'Glossar',
+  },
+  ru: {
+    home: 'Главная',
+    blog: 'Блог',
+    news: 'Новости',
+    tutorial: 'Учебники',
+    mainTopics: 'Основные темы',
+    ai: 'Искусственный интеллект',
+    crypto: 'Криптография и блокчейн',
+    dev: 'Разработка программного обеспечения',
+    infra: 'Цифровая инфраструктура (Серверы и сети)',
+    data: 'Наука о данных',
+    security: 'Безопасность',
+    learningPaths: 'Учебные пути',
+    aiEveryone: 'ИИ для всех',
+    blockchainBasics: 'Основы блокчейна',
+    dataFundamentals: 'Основы науки о данных',
+    cyberEssentials: 'Основы кибербезопасности',
+    glossary: 'Глоссарий',
+  },
+  fr: {
+    home: 'Page d\'accueil',
+    blog: 'Blog',
+    news: 'Actualités',
+    tutorial: 'Tutoriels',
+    mainTopics: 'Sujets principaux',
+    ai: 'Intelligence Artificielle',
+    crypto: 'Cryptographie et Blockchain',
+    dev: 'Développement de Logiciels',
+    infra: 'Infrastructure Numérique (Serveurs et Réseaux)',
+    data: 'Science des Données',
+    security: 'Sécurité',
+    learningPaths: 'Parcours d\'apprentissage',
+    aiEveryone: 'IA pour Tous',
+    blockchainBasics: 'Bases de la Blockchain',
+    dataFundamentals: 'Fondamentaux de la Science des Données',
+    cyberEssentials: 'Fondamentaux de la Cybersécurité',
+    glossary: 'Glossaire',
+  },
+  ja: {
+    home: 'ホーム',
+    blog: 'ブログ',
+    news: 'ニュース',
+    tutorial: 'チュートリアル',
+    mainTopics: '主要トピック',
+    ai: '人工知能',
+    crypto: '暗号化とブロックチェーン',
+    dev: 'ソフトウェア開発',
+    infra: 'デジタルインフラストラクチャ（サーバーとネットワーク）',
+    data: 'データサイエンス',
+    security: 'セキュリティ',
+    learningPaths: '学習パス',
+    aiEveryone: 'すべての人のためのAI',
+    blockchainBasics: 'ブロックチェーンの基礎',
+    dataFundamentals: 'データサイエンスの基礎',
+    cyberEssentials: 'サイバーセキュリティの基礎',
+    glossary: '用語集',
+  },
+};
 
-export const zhNavbar = defineNavbarConfig([
-  { text: '首页', link: '/zh/' },
-  { text: '博客', link: '/zh/blog/' },
-  { text: '新闻', link: '/zh/news/' },
-  { text: '教程', link: '/zh/tutorial/' },
-  {
-    text: '主要主题',
-    items: [
-      { text: '人工智能', link: '/zh/topics/artificial-intelligence/' },
-      { text: '密码学与区块链', link: '/zh/topics/cryptography-and-blockchain/' },
-      { text: '软件开发', link: '/zh/topics/software-development/' },
-      { text: '基础设施数字化（服务器和网络）', link: '/zh/topics/infrastructure-digital-server-and-network/' },
-      { text: '数据科学', link: '/zh/topics/data-science/' },
-      { text: '安全', link: '/zh/topics/security/' }
-    ]
-  },
-  {
-    text: '学习路径',
-    items: [
-      { text: '人人都能学的人工智能', link: '/zh/learning-paths/ai-for-everyone/' },
-      { text: '区块链基础', link: '/zh/learning-paths/blockchain-basics/' },
-      { text: '软件开发', link: '/zh/learning-paths/software-development/' },
-      { text: '数据科学基础', link: '/zh/learning-paths/data-science-fundamentals/' },
-      { text: '网络安全基础', link: '/zh/learning-paths/cybersecurity-essentials/' }
-    ]
-  },
-  { text: '术语表', link: '/zh/glossary/' },
-])
+// Function to generate navbar config for a specific language
+const createNavbar = (lang: keyof typeof translations) => {
+  const t = translations[lang];
+  const prefix = lang === 'en' ? '' : `/${lang}`;
 
-export const idNavbar = defineNavbarConfig([
-  { text: 'Beranda', link: '/id/' },
-  { text: 'Blog', link: '/id/blog/' },
-  { text: 'Berita', link: '/id/news/' },
-  { text: 'Tutorial', link: '/id/tutorial/' },
-  {
-    text: 'Topik Utama',
-    items: [
-      { text: 'Kecerdasan Buatan', link: '/id/topics/artificial-intelligence/' },
-      { text: 'Kriptografi dan Blockchain', link: '/id/topics/cryptography-and-blockchain/' },
-      { text: 'Pengembangan Perangkat Lunak', link: '/id/topics/software-development/' },
-      { text: 'Infrastruktur Digital (Server dan Jaringan)', link: '/id/topics/infrastructure-digital-server-and-network/' },
-      { text: 'Ilmu Data', link: '/id/topics/data-science/' },
-      { text: 'Keamanan', link: '/id/topics/security/' }
-    ]
-  },
-  {
-    text: 'Jalur Pembelajaran',
-    items: [
-      { text: 'AI untuk Semua', link: '/id/learning-paths/ai-for-everyone/' },
-      { text: 'Dasar-dasar Blockchain', link: '/id/learning-paths/blockchain-basics/' },
-      { text: 'Pengembangan Perangkat Lunak', link: '/id/learning-paths/software-development/' },
-      { text: 'Dasar-dasar Ilmu Data', link: '/id/learning-paths/data-science-fundamentals/' },
-      { text: 'Dasar-dasar Keamanan Siber', link: '/id/learning-paths/cybersecurity-essentials/' }
-    ]
-  },
-  { text: 'Glosarium', link: '/id/glossary/' },
-])
+  return [
+    { text: t.home, link: `${prefix}/` },
+    { text: t.blog, link: `${prefix}/blog/` },
+    { text: t.news, link: `${prefix}/news/` },
+    { text: t.tutorial, link: `${prefix}/tutorial/` },
+    {
+      text: t.mainTopics,
+      items: [
+        { text: t.ai, link: `${prefix}/topics/artificial-intelligence/` },
+        { text: t.crypto, link: `${prefix}/topics/cryptography-and-blockchain/` },
+        { text: t.dev, link: `${prefix}/topics/software-development/` },
+        { text: t.infra, link: `${prefix}/topics/infrastructure-digital-server-and-network/` },
+        { text: t.data, link: `${prefix}/topics/data-science/` },
+        { text: t.security, link: `${prefix}/topics/security/` },
+      ],
+    },
+    {
+      text: t.learningPaths,
+      items: [
+        { text: t.aiEveryone, link: `${prefix}/learning-paths/ai-for-everyone/` },
+        { text: t.blockchainBasics, link: `${prefix}/learning-paths/blockchain-basics/` },
+        { text: t.dev, link: `${prefix}/learning-paths/software-development/` },
+        { text: t.dataFundamentals, link: `${prefix}/learning-paths/data-science-fundamentals/` },
+        { text: t.cyberEssentials, link: `${prefix}/learning-paths/cybersecurity-essentials/` },
+      ],
+    },
+    { text: t.glossary, link: `${prefix}/glossary/` },
+  ];
+};
 
-export const deNavbar = defineNavbarConfig([
-  { text: 'Startseite', link: '/de/' },
-  { text: 'Blog', link: '/de/blog/' },
-  { text: 'Nachrichten', link: '/de/news/' },
-  { text: 'Tutorials', link: '/de/tutorial/' },
-  {
-    text: 'Hauptthemen',
-    items: [
-      { text: 'Künstliche Intelligenz', link: '/de/topics/artificial-intelligence/' },
-      { text: 'Kryptographie und Blockchain', link: '/de/topics/cryptography-and-blockchain/' },
-      { text: 'Softwareentwicklung', link: '/de/topics/software-development/' },
-      { text: 'Digitale Infrastruktur (Server und Netzwerk)', link: '/de/topics/infrastructure-digital-server-and-network/' },
-      { text: 'Datenwissenschaft', link: '/de/topics/data-science/' },
-      { text: 'Sicherheit', link: '/de/topics/security/' }
-    ]
-  },
-  {
-    text: 'Lernpfade',
-    items: [
-      { text: 'KI für alle', link: '/de/learning-paths/ai-for-everyone/' },
-      { text: 'Blockchain-Grundlagen', link: '/de/learning-paths/blockchain-basics/' },
-      { text: 'Softwareentwicklung', link: '/de/learning-paths/software-development/' },
-      { text: 'Grundlagen der Datenwissenschaft', link: '/de/learning-paths/data-science-fundamentals/' },
-      { text: 'Grundlagen der Cybersicherheit', link: '/de/learning-paths/cybersecurity-essentials/' }
-    ]
-  },
-  { text: 'Glossar', link: '/de/glossary/' },
-])
-
-export const ruNavbar = defineNavbarConfig([
-  { text: 'Главная', link: '/ru/' },
-  { text: 'Блог', link: '/ru/blog/' },
-  { text: 'Новости', link: '/ru/news/' },
-  { text: 'Учебники', link: '/ru/tutorial/' },
-  {
-    text: 'Основные темы',
-    items: [
-      { text: 'Искусственный интеллект', link: '/ru/topics/artificial-intelligence/' },
-      { text: 'Криптография и блокчейн', link: '/ru/topics/cryptography-and-blockchain/' },
-      { text: 'Разработка программного обеспечения', link: '/ru/topics/software-development/' },
-      { text: 'Цифровая инфраструктура (Серверы и сети)', link: '/ru/topics/infrastructure-digital-server-and-network/' },
-      { text: 'Наука о данных', link: '/ru/topics/data-science/' },
-      { text: 'Безопасность', link: '/ru/topics/security/' }
-    ]
-  },
-  {
-    text: 'Учебные пути',
-    items: [
-      { text: 'ИИ для всех', link: '/ru/learning-paths/ai-for-everyone/' },
-      { text: 'Основы блокчейна', link: '/ru/learning-paths/blockchain-basics/' },
-      { text: 'Разработка программного обеспечения', link: '/ru/learning-paths/software-development/' },
-      { text: 'Основы науки о данных', link: '/ru/learning-paths/data-science-fundamentals/' },
-      { text: 'Основы кибербезопасности', link: '/ru/learning-paths/cybersecurity-essentials/' }
-    ]
-  },
-  { text: 'Глоссарий', link: '/ru/glossary/' },
-])
-
-export const frNavbar = defineNavbarConfig([
-  { text: 'Page d\'accueil', link: '/fr/' },
-  { text: 'Blog', link: '/fr/blog/' },
-  { text: 'Actualités', link: '/fr/news/' },
-  { text: 'Tutoriels', link: '/fr/tutorial/' },
-  {
-    text: 'Sujets principaux',
-    items: [
-      { text: 'Intelligence Artificielle', link: '/fr/topics/artificial-intelligence/' },
-      { text: 'Cryptographie et Blockchain', link: '/fr/topics/cryptography-and-blockchain/' },
-      { text: 'Développement de Logiciels', link: '/fr/topics/software-development/' },
-      { text: 'Infrastructure Numérique (Serveurs et Réseaux)', link: '/fr/topics/infrastructure-digital-server-and-network/' },
-      { text: 'Science des Données', link: '/fr/topics/data-science/' },
-      { text: 'Sécurité', link: '/fr/topics/security/' }
-    ]
-  },
-  {
-    text: 'Parcours d\'apprentissage',
-    items: [
-      { text: 'IA pour Tous', link: '/fr/learning-paths/ai-for-everyone/' },
-      { text: 'Bases de la Blockchain', link: '/fr/learning-paths/blockchain-basics/' },
-      { text: 'Développement de Logiciels', link: '/fr/learning-paths/software-development/' },
-      { text: 'Fondamentaux de la Science des Données', link: '/fr/learning-paths/data-science-fundamentals/' },
-      { text: 'Fondamentaux de la Cybersécurité', link: '/fr/learning-paths/cybersecurity-essentials/' }
-    ]
-  },
-  { text: 'Glossaire', link: '/fr/glossary/' },
-])
-
-export const jaNavbar = defineNavbarConfig([
-  { text: 'ホーム', link: '/ja/' },
-  { text: 'ブログ', link: '/ja/blog/' },
-  { text: 'ニュース', link: '/ja/news/' },
-  { text: 'チュートリアル', link: '/ja/tutorial/' },
-  {
-    text: '主要トピック',
-    items: [
-      { text: '人工知能', link: '/ja/topics/artificial-intelligence/' },
-      { text: '暗号化とブロックチェーン', link: '/ja/topics/cryptography-and-blockchain/' },
-      { text: 'ソフトウェア開発', link: '/ja/topics/software-development/' },
-      { text: 'デジタルインフラストラクチャ（サーバーとネットワーク）', link: '/ja/topics/infrastructure-digital-server-and-network/' },
-      { text: 'データサイエンス', link: '/ja/topics/data-science/' },
-      { text: 'セキュリティ', link: '/ja/topics/security/' }
-    ]
-  },
-  {
-    text: '学習パス',
-    items: [
-      { text: 'すべての人のためのAI', link: '/ja/learning-paths/ai-for-everyone/' },
-      { text: 'ブロックチェーンの基礎', link: '/ja/learning-paths/blockchain-basics/' },
-      { text: 'ソフトウェア開発', link: '/ja/learning-paths/software-development/' },
-      { text: 'データサイエンスの基礎', link: '/ja/learning-paths/data-science-fundamentals/' },
-      { text: 'サイバーセキュリティの基礎', link: '/ja/learning-paths/cybersecurity-essentials/' }
-    ]
-  },
-  { text: '用語集', link: '/ja/glossary/' },
-])
+// Exporting each language's navbar configuration
+export const enNavbar = defineNavbarConfig(createNavbar('en'));
+export const zhNavbar = defineNavbarConfig(createNavbar('zh'));
+export const idNavbar = defineNavbarConfig(createNavbar('id'));
+export const deNavbar = defineNavbarConfig(createNavbar('de'));
+export const ruNavbar = defineNavbarConfig(createNavbar('ru'));
+export const frNavbar = defineNavbarConfig(createNavbar('fr'));
+export const jaNavbar = defineNavbarConfig(createNavbar('ja'));

@@ -5,14 +5,14 @@ permalink: /ru/article/7phxj1n7/
 icon: article
 cover: /image/cover.png
 category:
-  - Documentation
-  - Guides
-  - Tutorials
-  - Best Practices
+  - Документация
+  - Руководства
+  - Туториалы
+  - Лучшие практики
 tags:
   - markdown
-  - syntax
-  - formatting
+  - синтаксис
+  - форматирование
 index: true
 author:
   - name: "Firmansyah Mukti Wijaya"
@@ -21,90 +21,90 @@ author:
   - name: "Ikimukti"
     email: "info@ikimukti.com"
     url: "https://ikimukti.com"
-lang: en-US
+lang: ru-RU
 sticky: true
 draft: false
-excerpt: "Learn the basics of Markdown syntax and formatting. With Markdown, you can easily format your text, create lists, add images, and more."
+excerpt: "Изучите основы синтаксиса и форматирования Markdown. С помощью Markdown вы легко можете форматировать текст, создавать списки, добавлять изображения и многое другое."
 ---
 
-## Heading 2
+## Заголовок 2
 
-### Heading 3
+### Заголовок 3
 
-#### Heading 4
+#### Заголовок 4
 
-##### Heading 5
+##### Заголовок 5
 
-###### Heading 6
+###### Заголовок 6
 
-Bold: **Bold text**
+Жирный: **Жирный текст**
 
-Italic: _Italic text_
+Курсив: _Курсивный текст_
 
-~~Deleted text~~
+~~Удалённый текст~~
 
-Content ==Highlight==
+Контент ==Выделение==
 
-Mathematical expression: $-(2^{n-1})$ ~ $2^{n-1} -1$
+Математическое выражение: $-(2^{n-1})$ ~ $2^{n-1} -1$
 
 $\frac {\partial^r} {\partial \omega^r} \left(\frac {y^{\omega}} {\omega}\right)
 = \left(\frac {y^{\omega}} {\omega}\right) \left\{(\log y)^r + \sum_{i=1}^r \frac {(-1)^ Ir \cdots (r-i+1) (\log y)^{ri}} {\omega^i} \right\}$
 
-19^th^
+19^-ый^
 
 H~2~O
 
 ::: center
-content center
+контент по центру
 :::
 
 ::: right
-content right
+контент справа
 :::
 
-- Unordered List 1
-- Unordered List 2
-- Unordered List 3
+- Неупорядоченный список 1
+- Неупорядоченный список 2
+- Неупорядоченный список 3
 
-1. Ordered List 1
-2. Ordered List 2
-3. Ordered List 3
+1. Упорядоченный список 1
+2. Упорядоченный список 2
+3. Упорядоченный список 3
 
-- [ ] Task List 1
-- [ ] Task List 2
-- [x] Task List 3
-- [x] Task List 4
+- [ ] Задача 1
+- [ ] Задача 2
+- [x] Задача 3
+- [x] Задача 4
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Таблицы      | Это           | Круто  |
+| ------------ |:-------------:| ------:|
+| col 3        | по правому краю| $1600  |
+| col 2        | по центру      |   $12  |
+| зебра        | это классно    |    $1  |
 
-> quote content
+> цитата
 >
-> quote content
+> цитата
 
-[links](/)
+[ссылки](/)
 
-[outside links](https://github.com/pengzhanbo)
+[внешние ссылки](https://github.com/pengzhanbo)
 
-**Badge：**
+**Бейджи：**
 
-- <Badge type="info" text="info badge" />
-- <Badge type="tip" text="tip badge" />
-- <Badge type="warning" text="warning badge" />
-- <Badge type="danger" text="danger badge" />
+- <Badge type="info" text="информационный бейдж" />
+- <Badge type="tip" text="совет" />
+- <Badge type="warning" text="предупреждение" />
+- <Badge type="danger" text="опасность" />
 
-**icons：**
+**иконки：**
 
 - home - <Icon name="material-symbols:home" color="currentColor" size="1em" />
 - vscode - <Icon name="skill-icons:vscode-dark" size="2em" />
 - twitter - <Icon name="skill-icons:twitter" size="2em" />
 
-**demo wrapper：**
+**демо-обёртка：**
 
-::: demo-wrapper title="Demo" no-padding height="200px"
+::: demo-wrapper title="Демо" no-padding height="200px"
 <style scoped>
 .open-door {
   display: flex;
@@ -117,13 +117,13 @@ content right
 </style>
 
 <div class="open-door">
-  <div class="main">main</div>
-  <div class="aside">aside</div>
+  <div class="main">основной</div>
+  <div class="aside">боковая</div>
 </div>
 
 :::
 
-**code block：**
+**блок кода：**
 
 ```js whitespace
 const a = 1
@@ -136,7 +136,7 @@ const obj = {
     deep: {
       deep: {
         deep: {
-          value: 'this is to long text. this is to long text. this is to long text. this is to long text.', // [!code highlight]
+          value: 'это очень длинный текст. это очень длинный текст. это очень длинный текст. это очень длинный текст.', // [!code highlight]
         }
       }
     }
@@ -144,7 +144,7 @@ const obj = {
 }
 ```
 
-**code groups：**
+**группы кода：**
 
 ::: code-tabs
 @tab tab1
@@ -165,7 +165,7 @@ const c: number = a + b
 
 :::
 
-**code highlight：**
+**подсветка кода：**
 
 ```ts
 function foo() {
@@ -181,7 +181,7 @@ function foo() {
 }
 ```
 
-**code focus：**
+**фокус кода：**
 
 ```ts
 function foo() {
@@ -190,7 +190,7 @@ function foo() {
 ```
 
 ::: note
-note content [link](https://github.com/pengzhanbo) `inline code`
+заметка [ссылка](https://github.com/pengzhanbo) `встроенный код`
 
 ```js
 const a = 1
@@ -201,7 +201,7 @@ const c = a + b
 :::
 
 ::: info
-content [link](https://github.com/pengzhanbo) `inline code`
+информация [ссылка](https://github.com/pengzhanbo) `встроенный код`
 
 ```js
 const a = 1
@@ -212,7 +212,7 @@ const c = a + b
 :::
 
 ::: tip
-content [link](https://github.com/pengzhanbo) `inline code`
+совет [ссылка](https://github.com/pengzhanbo) `встроенный код`
 
 ```js
 const a = 1
@@ -223,7 +223,7 @@ const c = a + b
 :::
 
 ::: warning
-content [link](https://github.com/pengzhanbo) `inline code`
+предупреждение [ссылка](https://github.com/pengzhanbo) `встроенный код`
 
 ```js
 const a = 1
@@ -234,7 +234,7 @@ const c = a + b
 :::
 
 ::: caution
-content [link](https://github.com/pengzhanbo) `inline code`
+предостережение [ссылка](https://github.com/pengzhanbo) `встроенный код`
 
 ```js
 const a = 1
@@ -245,7 +245,7 @@ const c = a + b
 :::
 
 ::: important
-content [link](https://github.com/pengzhanbo) `inline code`
+важно [ссылка](https://github.com/pengzhanbo) `встроенный код`
 
 ```js
 const a = 1
@@ -255,29 +255,29 @@ const c = a + b
 
 :::
 
-**GFM alert：**
+**GFM оповещения：**
 
 > [!note]
-> note
+> заметка
 
 > [!info]
-> info
+> информация
 
 > [!tip]
-> tip
+> совет
 
 > [!warning]
-> warning
+> предупреждение
 
 > [!caution]
-> caution
+> предостережение
 
 > [!important]
-> important
+> важно
 
-**code demo:**
+**демо кода:**
 
-:::: demo title="Demo" desc="A normal demo"
+:::: demo title="Демо" desc="Обычный пример"
 
 ::: code-tabs
 @tab HTML
@@ -291,7 +291,7 @@ const c = a + b
 @tab Javascript
 
 ```js
-const a = 'So Awesome!'
+const a = 'Очень круто!'
 const app = document.querySelector('#app')
 app.appendChild(window.document.createElement('small')).textContent = a
 ```
@@ -308,38 +308,38 @@ app.appendChild(window.document.createElement('small')).textContent = a
 :::
 ::::
 
-**tab card：**
+**карточки вкладок：**
 
 ::: tabs
-@tab title 1
-content block
+@tab заголовок 1
+контент блока
 
-@tab title 2
-content block
+@tab заголовок 2
+контент блока
 :::
 
 :::: warning
 ::: tabs
-@tab title 1
-content block
+@tab заголовок 1
+контент блока
 
-@tab title 2
-content block
+@tab заголовок 2
+контент блока
 :::
 ::::
 
-**footnote：**
+**сноски：**
 
-footnote 1 link[^first]。
+сноска 1 ссылка[^first]。
 
-footnote 2 link[^second]。
+сноска 2 ссылка[^second]。
 
-inline footnote ^[^first] definition。
+встроенная сноска ^[^first] определение。
 
-Repeated footnote definition[^second]。
+Повторное определение сноски[^second]。
 
-[^first]: footnote **you can contain special mark**
+[^first]: сноска **может содержать спец. разметку**
 
-    also can contain paragraph
+    также может содержать параграф
 
-[^second]: footnote content.
+[^second]: содержимое сноски.

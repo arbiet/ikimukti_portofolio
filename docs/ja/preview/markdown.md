@@ -1,18 +1,18 @@
 ---
-title: Markdown
+title: Markdown 简体中文
 createTime: 2025/08/03 23:10:52
 permalink: /ja/article/7phxj1n7/
 icon: article
 cover: /image/cover.png
 category:
-  - Documentation
-  - Guides
-  - Tutorials
-  - Best Practices
+  - 文档
+  - 指南
+  - 教程
+  - 最佳实践
 tags:
   - markdown
-  - syntax
-  - formatting
+  - 语法
+  - 格式化
 index: true
 author:
   - name: "Firmansyah Mukti Wijaya"
@@ -21,90 +21,90 @@ author:
   - name: "Ikimukti"
     email: "info@ikimukti.com"
     url: "https://ikimukti.com"
-lang: en-US
+lang: zh-CN
 sticky: true
 draft: false
-excerpt: "Learn the basics of Markdown syntax and formatting. With Markdown, you can easily format your text, create lists, add images, and more."
+excerpt: "学习 Markdown 语法和格式化的基础知识。使用 Markdown，你可以轻松格式化文本、创建列表、添加图片等。"
 ---
 
-## Heading 2
+## 二级标题
 
-### Heading 3
+### 三级标题
 
-#### Heading 4
+#### 四级标题
 
-##### Heading 5
+##### 五级标题
 
-###### Heading 6
+###### 六级标题
 
-Bold: **Bold text**
+加粗：**加粗文本**
 
-Italic: _Italic text_
+斜体：_斜体文本_
 
-~~Deleted text~~
+~~删除文本~~
 
-Content ==Highlight==
+内容 ==高亮==
 
-Mathematical expression: $-(2^{n-1})$ ~ $2^{n-1} -1$
+数学表达式：$-(2^{n-1})$ ~ $2^{n-1} -1$
 
 $\frac {\partial^r} {\partial \omega^r} \left(\frac {y^{\omega}} {\omega}\right)
 = \left(\frac {y^{\omega}} {\omega}\right) \left\{(\log y)^r + \sum_{i=1}^r \frac {(-1)^ Ir \cdots (r-i+1) (\log y)^{ri}} {\omega^i} \right\}$
 
-19^th^
+19^次^
 
 H~2~O
 
 ::: center
-content center
+内容居中
 :::
 
 ::: right
-content right
+内容右对齐
 :::
 
-- Unordered List 1
-- Unordered List 2
-- Unordered List 3
+- 无序列表 1
+- 无序列表 2
+- 无序列表 3
 
-1. Ordered List 1
-2. Ordered List 2
-3. Ordered List 3
+1. 有序列表 1
+2. 有序列表 2
+3. 有序列表 3
 
-- [ ] Task List 1
-- [ ] Task List 2
-- [x] Task List 3
-- [x] Task List 4
+- [ ] 任务列表 1
+- [ ] 任务列表 2
+- [x] 任务列表 3
+- [x] 任务列表 4
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| 表格        | 是           | 酷  |
+| ----------- |:-----------:| ---:|
+| 第3列       | 右对齐      | $1600 |
+| 第2列       | 居中        |   $12 |
+| 斑马条纹    | 很棒        |    $1 |
 
-> quote content
+> 引用内容
 >
-> quote content
+> 引用内容
 
-[links](/)
+[链接](/)
 
-[outside links](https://github.com/pengzhanbo)
+[外部链接](https://github.com/pengzhanbo)
 
-**Badge：**
+**徽章：**
 
-- <Badge type="info" text="info badge" />
-- <Badge type="tip" text="tip badge" />
-- <Badge type="warning" text="warning badge" />
-- <Badge type="danger" text="danger badge" />
+- <Badge type="info" text="信息徽章" />
+- <Badge type="tip" text="提示徽章" />
+- <Badge type="warning" text="警告徽章" />
+- <Badge type="danger" text="危险徽章" />
 
-**icons：**
+**图标：**
 
 - home - <Icon name="material-symbols:home" color="currentColor" size="1em" />
 - vscode - <Icon name="skill-icons:vscode-dark" size="2em" />
 - twitter - <Icon name="skill-icons:twitter" size="2em" />
 
-**demo wrapper：**
+**演示包装器：**
 
-::: demo-wrapper title="Demo" no-padding height="200px"
+::: demo-wrapper title="演示" no-padding height="200px"
 <style scoped>
 .open-door {
   display: flex;
@@ -117,13 +117,13 @@ content right
 </style>
 
 <div class="open-door">
-  <div class="main">main</div>
-  <div class="aside">aside</div>
+  <div class="main">主内容</div>
+  <div class="aside">侧边栏</div>
 </div>
 
 :::
 
-**code block：**
+**代码块：**
 
 ```js whitespace
 const a = 1
@@ -136,7 +136,7 @@ const obj = {
     deep: {
       deep: {
         deep: {
-          value: 'this is to long text. this is to long text. this is to long text. this is to long text.', // [!code highlight]
+          value: '这是一段很长的文本。这是一段很长的文本。这是一段很长的文本。这是一段很长的文本。', // [!code highlight]
         }
       }
     }
@@ -144,7 +144,7 @@ const obj = {
 }
 ```
 
-**code groups：**
+**代码分组：**
 
 ::: code-tabs
 @tab tab1
@@ -165,7 +165,7 @@ const c: number = a + b
 
 :::
 
-**code highlight：**
+**代码高亮：**
 
 ```ts
 function foo() {
@@ -181,7 +181,7 @@ function foo() {
 }
 ```
 
-**code focus：**
+**代码聚焦：**
 
 ```ts
 function foo() {
@@ -190,7 +190,7 @@ function foo() {
 ```
 
 ::: note
-note content [link](https://github.com/pengzhanbo) `inline code`
+注释内容 [链接](https://github.com/pengzhanbo) `行内代码`
 
 ```js
 const a = 1
@@ -201,7 +201,7 @@ const c = a + b
 :::
 
 ::: info
-content [link](https://github.com/pengzhanbo) `inline code`
+信息内容 [链接](https://github.com/pengzhanbo) `行内代码`
 
 ```js
 const a = 1
@@ -212,7 +212,7 @@ const c = a + b
 :::
 
 ::: tip
-content [link](https://github.com/pengzhanbo) `inline code`
+提示内容 [链接](https://github.com/pengzhanbo) `行内代码`
 
 ```js
 const a = 1
@@ -223,7 +223,7 @@ const c = a + b
 :::
 
 ::: warning
-content [link](https://github.com/pengzhanbo) `inline code`
+警告内容 [链接](https://github.com/pengzhanbo) `行内代码`
 
 ```js
 const a = 1
@@ -234,7 +234,7 @@ const c = a + b
 :::
 
 ::: caution
-content [link](https://github.com/pengzhanbo) `inline code`
+注意内容 [链接](https://github.com/pengzhanbo) `行内代码`
 
 ```js
 const a = 1
@@ -245,7 +245,7 @@ const c = a + b
 :::
 
 ::: important
-content [link](https://github.com/pengzhanbo) `inline code`
+重要内容 [链接](https://github.com/pengzhanbo) `行内代码`
 
 ```js
 const a = 1
@@ -255,29 +255,29 @@ const c = a + b
 
 :::
 
-**GFM alert：**
+**GFM 警告：**
 
 > [!note]
-> note
+> 注释
 
 > [!info]
-> info
+> 信息
 
 > [!tip]
-> tip
+> 提示
 
 > [!warning]
-> warning
+> 警告
 
 > [!caution]
-> caution
+> 注意
 
 > [!important]
-> important
+> 重要
 
-**code demo:**
+**代码演示：**
 
-:::: demo title="Demo" desc="A normal demo"
+:::: demo title="演示" desc="一个普通的演示"
 
 ::: code-tabs
 @tab HTML
@@ -291,7 +291,7 @@ const c = a + b
 @tab Javascript
 
 ```js
-const a = 'So Awesome!'
+const a = '太棒了！'
 const app = document.querySelector('#app')
 app.appendChild(window.document.createElement('small')).textContent = a
 ```
@@ -308,38 +308,38 @@ app.appendChild(window.document.createElement('small')).textContent = a
 :::
 ::::
 
-**tab card：**
+**标签卡片：**
 
 ::: tabs
-@tab title 1
-content block
+@tab 标题 1
+内容块
 
-@tab title 2
-content block
+@tab 标题 2
+内容块
 :::
 
 :::: warning
 ::: tabs
-@tab title 1
-content block
+@tab 标题 1
+内容块
 
-@tab title 2
-content block
+@tab 标题 2
+内容块
 :::
 ::::
 
-**footnote：**
+**脚注：**
 
-footnote 1 link[^first]。
+脚注 1 链接[^first]。
 
-footnote 2 link[^second]。
+脚注 2 链接[^second]。
 
-inline footnote ^[^first] definition。
+行内脚注 ^[^first] 定义。
 
-Repeated footnote definition[^second]。
+重复脚注定义[^second]。
 
-[^first]: footnote **you can contain special mark**
+[^first]: 脚注 **可以包含特殊标记**
 
-    also can contain paragraph
+    也可以包含段落
 
-[^second]: footnote content.
+[^second]: 脚注

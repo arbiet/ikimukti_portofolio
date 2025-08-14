@@ -1,18 +1,18 @@
 ---
-title: Markdown
+title: Markdown Deutsch
 createTime: 2025/08/03 23:10:52
 permalink: /de/article/7phxj1n7/
 icon: article
 cover: /image/cover.png
 category:
-  - Documentation
-  - Guides
+  - Dokumentation
+  - Anleitungen
   - Tutorials
   - Best Practices
 tags:
   - markdown
   - syntax
-  - formatting
+  - formatierung
 index: true
 author:
   - name: "Firmansyah Mukti Wijaya"
@@ -21,88 +21,88 @@ author:
   - name: "Ikimukti"
     email: "info@ikimukti.com"
     url: "https://ikimukti.com"
-lang: en-US
+lang: de-DE
 sticky: true
 draft: false
-excerpt: "Learn the basics of Markdown syntax and formatting. With Markdown, you can easily format your text, create lists, add images, and more."
+excerpt: "Lerne die Grundlagen der Markdown-Syntax und -Formatierung. Mit Markdown kannst du ganz einfach deinen Text formatieren, Listen erstellen, Bilder hinzufügen und mehr."
 ---
 
-## Heading 2
+## Überschrift 2
 
-### Heading 3
+### Überschrift 3
 
-#### Heading 4
+#### Überschrift 4
 
-##### Heading 5
+##### Überschrift 5
 
-###### Heading 6
+###### Überschrift 6
 
-Bold: **Bold text**
+Fett: **Fetter Text**
 
-Italic: _Italic text_
+Kursiv: _Kursiver Text_
 
-~~Deleted text~~
+~~Gelöschter Text~~
 
-Content ==Highlight==
+Inhalt ==Hervorheben==
 
-Mathematical expression: $-(2^{n-1})$ ~ $2^{n-1} -1$
+Mathematischer Ausdruck: $-(2^{n-1})$ ~ $2^{n-1} -1$
 
 $\frac {\partial^r} {\partial \omega^r} \left(\frac {y^{\omega}} {\omega}\right)
 = \left(\frac {y^{\omega}} {\omega}\right) \left\{(\log y)^r + \sum_{i=1}^r \frac {(-1)^ Ir \cdots (r-i+1) (\log y)^{ri}} {\omega^i} \right\}$
 
-19^th^
+19^te^
 
 H~2~O
 
 ::: center
-content center
+zentrierter Inhalt
 :::
 
 ::: right
-content right
+rechter Inhalt
 :::
 
-- Unordered List 1
-- Unordered List 2
-- Unordered List 3
+- Ungeordnete Liste 1
+- Ungeordnete Liste 2
+- Ungeordnete Liste 3
 
-1. Ordered List 1
-2. Ordered List 2
-3. Ordered List 3
+1. Geordnete Liste 1
+2. Geordnete Liste 2
+3. Geordnete Liste 3
 
-- [ ] Task List 1
-- [ ] Task List 2
-- [x] Task List 3
-- [x] Task List 4
+- [ ] Aufgabenliste 1
+- [ ] Aufgabenliste 2
+- [x] Aufgabenliste 3
+- [x] Aufgabenliste 4
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Tabellen       | Sind           | Cool  |
+| -------------- |:--------------:| -----:|
+| Spalte 3 ist   | rechtsbündig   | $1600 |
+| Spalte 2 ist   | zentriert      |   $12 |
+| Zebra-Streifen | sind schick    |    $1 |
 
-> quote content
+> Zitat-Inhalt
 >
-> quote content
+> Zitat-Inhalt
 
-[links](/)
+[Links](/)
 
-[outside links](https://github.com/pengzhanbo)
+[Externe Links](https://github.com/pengzhanbo)
 
-**Badge：**
+**Abzeichen：**
 
-- <Badge type="info" text="info badge" />
-- <Badge type="tip" text="tip badge" />
-- <Badge type="warning" text="warning badge" />
-- <Badge type="danger" text="danger badge" />
+- <Badge type="info" text="Info-Abzeichen" />
+- <Badge type="tip" text="Tipp-Abzeichen" />
+- <Badge type="warning" text="Warnung-Abzeichen" />
+- <Badge type="danger" text="Gefahr-Abzeichen" />
 
-**icons：**
+**Icons：**
 
 - home - <Icon name="material-symbols:home" color="currentColor" size="1em" />
 - vscode - <Icon name="skill-icons:vscode-dark" size="2em" />
 - twitter - <Icon name="skill-icons:twitter" size="2em" />
 
-**demo wrapper：**
+**Demo-Wrapper：**
 
 ::: demo-wrapper title="Demo" no-padding height="200px"
 <style scoped>
@@ -117,13 +117,13 @@ content right
 </style>
 
 <div class="open-door">
-  <div class="main">main</div>
-  <div class="aside">aside</div>
+  <div class="main">Hauptbereich</div>
+  <div class="aside">Seitenbereich</div>
 </div>
 
 :::
 
-**code block：**
+**Codeblock：**
 
 ```js whitespace
 const a = 1
@@ -136,7 +136,7 @@ const obj = {
     deep: {
       deep: {
         deep: {
-          value: 'this is to long text. this is to long text. this is to long text. this is to long text.', // [!code highlight]
+          value: 'Dies ist ein sehr langer Text. Dies ist ein sehr langer Text. Dies ist ein sehr langer Text. Dies ist ein sehr langer Text.', // [!code highlight]
         }
       }
     }
@@ -144,10 +144,10 @@ const obj = {
 }
 ```
 
-**code groups：**
+**Code-Gruppen：**
 
 ::: code-tabs
-@tab tab1
+@tab Tab1
 
 ```js
 const a = 1
@@ -155,7 +155,7 @@ const b = 2
 const c = a + b
 ```
 
-@tab tab2
+@tab Tab2
 
 ```ts
 const a: number = 1
@@ -165,7 +165,7 @@ const c: number = a + b
 
 :::
 
-**code highlight：**
+**Code-Hervorhebung：**
 
 ```ts
 function foo() {
@@ -181,7 +181,7 @@ function foo() {
 }
 ```
 
-**code focus：**
+**Code-Fokus：**
 
 ```ts
 function foo() {
@@ -190,7 +190,7 @@ function foo() {
 ```
 
 ::: note
-note content [link](https://github.com/pengzhanbo) `inline code`
+Hinweis-Inhalt [Link](https://github.com/pengzhanbo) `Inline-Code`
 
 ```js
 const a = 1
@@ -201,7 +201,7 @@ const c = a + b
 :::
 
 ::: info
-content [link](https://github.com/pengzhanbo) `inline code`
+Inhalt [Link](https://github.com/pengzhanbo) `Inline-Code`
 
 ```js
 const a = 1
@@ -212,7 +212,7 @@ const c = a + b
 :::
 
 ::: tip
-content [link](https://github.com/pengzhanbo) `inline code`
+Inhalt [Link](https://github.com/pengzhanbo) `Inline-Code`
 
 ```js
 const a = 1
@@ -223,7 +223,7 @@ const c = a + b
 :::
 
 ::: warning
-content [link](https://github.com/pengzhanbo) `inline code`
+Inhalt [Link](https://github.com/pengzhanbo) `Inline-Code`
 
 ```js
 const a = 1
@@ -234,7 +234,7 @@ const c = a + b
 :::
 
 ::: caution
-content [link](https://github.com/pengzhanbo) `inline code`
+Inhalt [Link](https://github.com/pengzhanbo) `Inline-Code`
 
 ```js
 const a = 1
@@ -245,7 +245,7 @@ const c = a + b
 :::
 
 ::: important
-content [link](https://github.com/pengzhanbo) `inline code`
+Inhalt [Link](https://github.com/pengzhanbo) `Inline-Code`
 
 ```js
 const a = 1
@@ -255,29 +255,29 @@ const c = a + b
 
 :::
 
-**GFM alert：**
+**GFM-Hinweis：**
 
 > [!note]
-> note
+> Hinweis
 
 > [!info]
-> info
+> Info
 
 > [!tip]
-> tip
+> Tipp
 
 > [!warning]
-> warning
+> Warnung
 
 > [!caution]
-> caution
+> Vorsicht
 
 > [!important]
-> important
+> Wichtig
 
-**code demo:**
+**Code-Demo:**
 
-:::: demo title="Demo" desc="A normal demo"
+:::: demo title="Demo" desc="Eine normale Demo"
 
 ::: code-tabs
 @tab HTML
@@ -291,7 +291,7 @@ const c = a + b
 @tab Javascript
 
 ```js
-const a = 'So Awesome!'
+const a = 'So großartig!'
 const app = document.querySelector('#app')
 app.appendChild(window.document.createElement('small')).textContent = a
 ```
@@ -308,38 +308,38 @@ app.appendChild(window.document.createElement('small')).textContent = a
 :::
 ::::
 
-**tab card：**
+**Tab-Karte：**
 
 ::: tabs
-@tab title 1
-content block
+@tab Titel 1
+Inhaltsblock
 
-@tab title 2
-content block
+@tab Titel 2
+Inhaltsblock
 :::
 
 :::: warning
 ::: tabs
-@tab title 1
-content block
+@tab Titel 1
+Inhaltsblock
 
-@tab title 2
-content block
+@tab Titel 2
+Inhaltsblock
 :::
 ::::
 
-**footnote：**
+**Fußnote：**
 
-footnote 1 link[^first]。
+Fußnote 1 Link[^first]。
 
-footnote 2 link[^second]。
+Fußnote 2 Link[^second]。
 
-inline footnote ^[^first] definition。
+Inline-Fußnote ^[^first] Definition。
 
-Repeated footnote definition[^second]。
+Wiederholte Fußnotendefinition[^second]。
 
-[^first]: footnote **you can contain special mark**
+[^first]: Fußnote **du kannst spezielle Markierungen enthalten**
 
-    also can contain paragraph
+    kann auch einen Absatz enthalten
 
-[^second]: footnote content.
+[^second]: Fußnote Inhalt.

@@ -1,105 +1,105 @@
 ---
-title: Markdown
+title: Markdown 日本語
 tags:
   - markdown
 createTime: 2025/08/03 23:10:52
 permalink: /zh/article/sprilind/
 ---
 
-## 标题H2
+## 見出しH2
 
-### 标题H3
+### 見出しH3
 
-#### 标题H4
+#### 見出しH4
 
-##### 标题H5
+##### 見出しH5
 
-###### 标题H6
+###### 見出しH6
 
-## 标题2 Badge <Badge type="tip" text="Badge" />
+## 見出し2 バッジ <Badge type="tip" text="バッジ" />
 
-### 标题3 Badge <Badge type="warning" text="Badge" />
+### 見出し3 バッジ <Badge type="warning" text="バッジ" />
 
-#### 标题4 Badge <Badge type="danger" text="Badge" />
+#### 見出し4 バッジ <Badge type="danger" text="バッジ" />
 
-正文内容。
+本文内容。
 
-`@property` CSS at-rule是 [CSS Houdini API](https://developer.mozilla.org/zh-CN/docs/Web/Guide/Houdini)
-的一部分，它允许开发者显式地定义他们的 [CSS 自定义属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/--*),
-允许进行属性类型检查、设定默认值以及定义该自定义属性是否可以被继承。
+`@property` CSS at-ruleは [CSS Houdini API](https://developer.mozilla.org/ja/docs/Web/Guide/Houdini)
+の一部であり、開発者が [CSSカスタムプロパティ](https://developer.mozilla.org/ja/docs/Web/CSS/--*)
+を明示的に定義でき、型チェック、デフォルト値の設定、継承可否の指定が可能です。
 
-`@property` 的出现，极大的增强了 CSS 的能力。
+`@property` の登場により、CSSの機能が大幅に強化されました。
 
-加粗：**加粗文字**
+太字：**太字テキスト**
 
-斜体： _斜体文字_
+斜体： _斜体テキスト_
 
-~~删除文字~~
+~~取り消し線テキスト~~
 
-内容 ==标记==
+内容 ==マーク==
 
-数学表达式： $-(2^{n-1})$ ~ $2^{n-1} -1$
+数式表現： $-(2^{n-1})$ ~ $2^{n-1} -1$
 
 $\frac {\partial^r} {\partial \omega^r} \left(\frac {y^{\omega}} {\omega}\right)
 = \left(\frac {y^{\omega}} {\omega}\right) \left\{(\log y)^r + \sum_{i=1}^r \frac {(-1)^ Ir \cdots (r-i+1) (\log y)^{ri}} {\omega^i} \right\}$
 
-19^th^
+19^番目^
 
 H~2~O
 
 ::: center
-内容居中
+中央揃えの内容
 :::
 
 ::: right
-内容右对齐
+右揃えの内容
 :::
 
-- 无序列表1
-- 无序列表2
-- 无序列表3
+- 箇条書き1
+- 箇条書き2
+- 箇条書き3
 
-1. 有序列表1
-2. 有序列表2
-3. 有序列表3
+1. 番号付きリスト1
+2. 番号付きリスト2
+3. 番号付きリスト3
 
-- [ ] 任务列表1
-- [ ] 任务列表2
-- [x] 任务列表3
-- [x] 任务列表4
+- [ ] タスクリスト1
+- [ ] タスクリスト2
+- [x] タスクリスト3
+- [x] タスクリスト4
 
-| Tables        | Are           | Cool  |
+| テーブル        | は           | クール  |
 | ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| col 3は      | 右寄せ        | $1600 |
+| col 2は      | 中央揃え      |   $12 |
+| ゼブラストライプ | すごい      |    $1 |
 
 > 引用内容
 >
 > 引用内容
 
-[链接](/)
+[リンク](/)
 
-[外部链接](https://github.com/pengzhanbo)
+[外部リンク](https://github.com/pengzhanbo)
 
 ![plume](/plume.svg)
 
-**Badge：**
+**バッジ：**
 
-- <Badge type="info" text="info badge" />
-- <Badge type="tip" text="tip badge" />
-- <Badge type="warning" text="warning badge" />
-- <Badge type="danger" text="danger badge" />
+- <Badge type="info" text="infoバッジ" />
+- <Badge type="tip" text="tipバッジ" />
+- <Badge type="warning" text="warningバッジ" />
+- <Badge type="danger" text="dangerバッジ" />
 
-**图标：**
+**アイコン：**
 
 - home - <Icon name="material-symbols:home" color="currentColor" size="1em" />
 - vscode - <Icon name="skill-icons:vscode-dark" size="2em" />
 - twitter - <Icon name="skill-icons:twitter" size="2em" />
 
-**demo wrapper：**
+**デモラッパー：**
 
-::: demo-wrapper title="示例" no-padding height="200px"
+::: demo-wrapper title="サンプル" no-padding height="200px"
 <style scoped>
 .open-door {
   display: flex;
@@ -112,13 +112,13 @@ H~2~O
 </style>
 
 <div class="open-door">
-  <div class="main">main</div>
-  <div class="aside">aside</div>
+  <div class="main">メイン</div>
+  <div class="aside">サイド</div>
 </div>
 
 :::
 
-**代码：**
+**コード：**
 
 ```js whitespace
 const a = 1
@@ -131,7 +131,7 @@ const obj = {
     deep: {
       deep: {
         deep: {
-          value: 'this is to long text. this is to long text. this is to long text. this is to long text.', // [!code highlight]
+          value: 'これはとても長いテキストです。これはとても長いテキストです。これはとても長いテキストです。これはとても長いテキストです。', // [!code highlight]
         }
       }
     }
@@ -139,7 +139,7 @@ const obj = {
 }
 ```
 
-**Code Blocks TwoSlash：**
+**コードブロック TwoSlash：**
 
 ```ts twoslash
 // @errors: 2339
@@ -160,13 +160,13 @@ app.listen(3000)
 import { createHighlighter } from 'shiki'
 
 const highlighter = await createHighlighter({ themes: ['nord'], langs: ['javascript'] })
-// @log: Custom log message
+// @log: カスタムログメッセージ
 const a = 1
-// @error: Custom error message
+// @error: カスタムエラーメッセージ
 const b = 1
-// @warn: Custom warning message
+// @warn: カスタム警告メッセージ
 const c = 1
-// @annotate: Custom annotation message
+// @annotate: カスタム注釈メッセージ
 ```
 
 ```ts twoslash
@@ -201,10 +201,10 @@ const count = ref(0)
 </template>
 ```
 
-**代码分组：**
+**コードグループ：**
 
 ::: code-tabs
-@tab tab1
+@tab タブ1
 
 ```js
 const a = 1
@@ -212,7 +212,7 @@ const b = 2
 const c = a + b
 ```
 
-@tab tab2
+@tab タブ2
 
 ```ts
 const a: number = 1
@@ -222,7 +222,7 @@ const c: number = a + b
 
 :::
 
-**代码块高亮：**
+**コードブロックハイライト：**
 
 ```ts
 function foo() {
@@ -238,7 +238,7 @@ function foo() {
 }
 ```
 
-**代码块聚焦：**
+**コードブロックフォーカス：**
 
 ```ts
 function foo() {
@@ -246,11 +246,11 @@ function foo() {
 }
 ```
 
-::: tip 仅标题
+::: tip タイトルのみ
 :::
 
-::: note 注释
-注释内容 [link](https://github.com/pengzhanbo) `inline code`
+::: note 注釈
+注釈内容 [link](https://github.com/pengzhanbo) `インラインコード`
 
 ```js
 const a = 1
@@ -260,8 +260,8 @@ const c = a + b
 
 :::
 
-::: info 信息
-信息内容 [link](https://github.com/pengzhanbo) `inline code`
+::: info 情報
+情報内容 [link](https://github.com/pengzhanbo) `インラインコード`
 
 ```js
 const a = 1
@@ -271,8 +271,8 @@ const c = a + b
 
 :::
 
-::: tip 提示
-提示内容 [link](https://github.com/pengzhanbo) `inline code`
+::: tip ヒント
+ヒント内容 [link](https://github.com/pengzhanbo) `インラインコード`
 
 ```js
 const a = 1
@@ -283,7 +283,7 @@ const c = a + b
 :::
 
 ::: warning 警告
-警告内容 [link](https://github.com/pengzhanbo) `inline code`
+警告内容 [link](https://github.com/pengzhanbo) `インラインコード`
 
 ```js
 const a = 1
@@ -293,8 +293,8 @@ const c = a + b
 
 :::
 
-::: caution 错误
-错误内容 [link](https://github.com/pengzhanbo) `inline code`
+::: caution エラー
+エラー内容 [link](https://github.com/pengzhanbo) `インラインコード`
 
 ```js
 const a = 1
@@ -305,7 +305,7 @@ const c = a + b
 :::
 
 ::: important 重要
-重要内容 [link](https://github.com/pengzhanbo) `inline code`
+重要内容 [link](https://github.com/pengzhanbo) `インラインコード`
 
 ```js
 const a = 1
@@ -315,34 +315,34 @@ const c = a + b
 
 :::
 
-::: details 详细标题
+::: details 詳細タイトル
 
-这里是内容。
+ここに内容があります。
 :::
 
-**GFM alert：**
+**GFMアラート：**
 
 > [!note]
-> note
+> ノート
 
 > [!info]
-> info
+> 情報
 
 > [!tip]
-> tip
+> ヒント
 
 > [!warning]
-> warning
+> 警告
 
 > [!caution]
-> caution
+> 注意
 
 > [!important]
-> important
+> 重要
 
-**代码演示：**
+**コードデモ：**
 
-:::: demo title="常规示例" desc="一个常规示例"
+:::: demo title="一般的なサンプル" desc="一般的なサンプルです"
 
 ::: code-tabs
 @tab HTML
@@ -356,7 +356,7 @@ const c = a + b
 @tab Javascript
 
 ```js
-const a = 'So Awesome!'
+const a = 'とても素晴らしい！'
 const app = document.querySelector('#app')
 app.appendChild(window.document.createElement('small')).textContent = a
 ```
@@ -373,38 +373,38 @@ app.appendChild(window.document.createElement('small')).textContent = a
 :::
 ::::
 
-**选项卡：**
+**タブ：**
 
 ::: tabs
-@tab 标题1
-内容区块
+@tab タイトル1
+内容ブロック
 
-@tab 标题2
-内容区块
+@tab タイトル2
+内容ブロック
 :::
 
 :::: warning
 ::: tabs
-@tab 标题1
-内容区块
+@tab タイトル1
+内容ブロック
 
-@tab 标题2
-内容区块
+@tab タイトル2
+内容ブロック
 :::
 ::::
 
 **脚注：**
 
-脚注 1 链接[^first]。
+脚注1リンク[^first]。
 
-脚注 2 链接[^second]。
+脚注2リンク[^second]。
 
-行内的脚注^[行内脚注文本] 定义。
+インライン脚注^[インライン脚注テキスト] の定義。
 
-重复的页脚定义[^second]。
+重複した脚注定義[^second]。
 
-[^first]: 脚注 **可以包含特殊标记**
+[^first]: 脚注 **には特別なマークを含めることができます**
 
-    也可以由多个段落组成
+    複数の段落で構成することもできます
 
 [^second]: 脚注文字。

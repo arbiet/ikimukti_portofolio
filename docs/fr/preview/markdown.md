@@ -1,5 +1,5 @@
 ---
-title: Markdown
+title: Markdown Français
 createTime: 2025/08/03 23:10:52
 permalink: /fr/article/7phxj1n7/
 icon: article
@@ -7,12 +7,12 @@ cover: /image/cover.png
 category:
   - Documentation
   - Guides
-  - Tutorials
-  - Best Practices
+  - Tutoriels
+  - Bonnes Pratiques
 tags:
   - markdown
-  - syntax
-  - formatting
+  - syntaxe
+  - formatage
 index: true
 author:
   - name: "Firmansyah Mukti Wijaya"
@@ -21,90 +21,90 @@ author:
   - name: "Ikimukti"
     email: "info@ikimukti.com"
     url: "https://ikimukti.com"
-lang: en-US
+lang: fr-FR
 sticky: true
 draft: false
-excerpt: "Learn the basics of Markdown syntax and formatting. With Markdown, you can easily format your text, create lists, add images, and more."
+excerpt: "Apprenez les bases de la syntaxe et du formatage Markdown. Avec Markdown, vous pouvez facilement formater votre texte, créer des listes, ajouter des images, et plus encore."
 ---
 
-## Heading 2
+## Titre 2
 
-### Heading 3
+### Titre 3
 
-#### Heading 4
+#### Titre 4
 
-##### Heading 5
+##### Titre 5
 
-###### Heading 6
+###### Titre 6
 
-Bold: **Bold text**
+Gras : **Texte en gras**
 
-Italic: _Italic text_
+Italique : _Texte en italique_
 
-~~Deleted text~~
+~~Texte supprimé~~
 
-Content ==Highlight==
+Contenu ==Surligné==
 
-Mathematical expression: $-(2^{n-1})$ ~ $2^{n-1} -1$
+Expression mathématique : $-(2^{n-1})$ ~ $2^{n-1} -1$
 
 $\frac {\partial^r} {\partial \omega^r} \left(\frac {y^{\omega}} {\omega}\right)
 = \left(\frac {y^{\omega}} {\omega}\right) \left\{(\log y)^r + \sum_{i=1}^r \frac {(-1)^ Ir \cdots (r-i+1) (\log y)^{ri}} {\omega^i} \right\}$
 
-19^th^
+19^ème^
 
 H~2~O
 
 ::: center
-content center
+contenu centré
 :::
 
 ::: right
-content right
+contenu à droite
 :::
 
-- Unordered List 1
-- Unordered List 2
-- Unordered List 3
+- Liste non ordonnée 1
+- Liste non ordonnée 2
+- Liste non ordonnée 3
 
-1. Ordered List 1
-2. Ordered List 2
-3. Ordered List 3
+1. Liste ordonnée 1
+2. Liste ordonnée 2
+3. Liste ordonnée 3
 
-- [ ] Task List 1
-- [ ] Task List 2
-- [x] Task List 3
-- [x] Task List 4
+- [ ] Tâche 1
+- [ ] Tâche 2
+- [x] Tâche 3
+- [x] Tâche 4
 
-| Tables        | Are           | Cool  |
+| Tableaux      | Sont           | Cool  |
 | ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| col 3 est     | alignée à droite | $1600 |
+| col 2 est     | centrée        |   $12 |
+| rayures zébrées | sont sympas   |    $1 |
 
-> quote content
+> contenu de citation
 >
-> quote content
+> contenu de citation
 
-[links](/)
+[liens](/)
 
-[outside links](https://github.com/pengzhanbo)
+[liens externes](https://github.com/pengzhanbo)
 
 **Badge：**
 
-- <Badge type="info" text="info badge" />
-- <Badge type="tip" text="tip badge" />
-- <Badge type="warning" text="warning badge" />
-- <Badge type="danger" text="danger badge" />
+- <Badge type="info" text="badge info" />
+- <Badge type="tip" text="badge astuce" />
+- <Badge type="warning" text="badge avertissement" />
+- <Badge type="danger" text="badge danger" />
 
-**icons：**
+**icônes：**
 
-- home - <Icon name="material-symbols:home" color="currentColor" size="1em" />
+- accueil - <Icon name="material-symbols:home" color="currentColor" size="1em" />
 - vscode - <Icon name="skill-icons:vscode-dark" size="2em" />
 - twitter - <Icon name="skill-icons:twitter" size="2em" />
 
-**demo wrapper：**
+**démo wrapper：**
 
-::: demo-wrapper title="Demo" no-padding height="200px"
+::: demo-wrapper title="Démo" no-padding height="200px"
 <style scoped>
 .open-door {
   display: flex;
@@ -117,13 +117,13 @@ content right
 </style>
 
 <div class="open-door">
-  <div class="main">main</div>
+  <div class="main">principal</div>
   <div class="aside">aside</div>
 </div>
 
 :::
 
-**code block：**
+**bloc de code：**
 
 ```js whitespace
 const a = 1
@@ -136,7 +136,7 @@ const obj = {
     deep: {
       deep: {
         deep: {
-          value: 'this is to long text. this is to long text. this is to long text. this is to long text.', // [!code highlight]
+          value: 'ce texte est trop long. ce texte est trop long. ce texte est trop long. ce texte est trop long.', // [!code highlight]
         }
       }
     }
@@ -144,10 +144,10 @@ const obj = {
 }
 ```
 
-**code groups：**
+**groupes de code：**
 
 ::: code-tabs
-@tab tab1
+@tab onglet1
 
 ```js
 const a = 1
@@ -155,7 +155,7 @@ const b = 2
 const c = a + b
 ```
 
-@tab tab2
+@tab onglet2
 
 ```ts
 const a: number = 1
@@ -165,7 +165,7 @@ const c: number = a + b
 
 :::
 
-**code highlight：**
+**mise en évidence du code：**
 
 ```ts
 function foo() {
@@ -181,7 +181,7 @@ function foo() {
 }
 ```
 
-**code focus：**
+**focus sur le code：**
 
 ```ts
 function foo() {
@@ -190,7 +190,7 @@ function foo() {
 ```
 
 ::: note
-note content [link](https://github.com/pengzhanbo) `inline code`
+contenu de note [lien](https://github.com/pengzhanbo) `code en ligne`
 
 ```js
 const a = 1
@@ -201,7 +201,7 @@ const c = a + b
 :::
 
 ::: info
-content [link](https://github.com/pengzhanbo) `inline code`
+contenu info [lien](https://github.com/pengzhanbo) `code en ligne`
 
 ```js
 const a = 1
@@ -212,7 +212,7 @@ const c = a + b
 :::
 
 ::: tip
-content [link](https://github.com/pengzhanbo) `inline code`
+contenu astuce [lien](https://github.com/pengzhanbo) `code en ligne`
 
 ```js
 const a = 1
@@ -223,7 +223,7 @@ const c = a + b
 :::
 
 ::: warning
-content [link](https://github.com/pengzhanbo) `inline code`
+contenu avertissement [lien](https://github.com/pengzhanbo) `code en ligne`
 
 ```js
 const a = 1
@@ -234,7 +234,7 @@ const c = a + b
 :::
 
 ::: caution
-content [link](https://github.com/pengzhanbo) `inline code`
+contenu prudence [lien](https://github.com/pengzhanbo) `code en ligne`
 
 ```js
 const a = 1
@@ -245,7 +245,7 @@ const c = a + b
 :::
 
 ::: important
-content [link](https://github.com/pengzhanbo) `inline code`
+contenu important [lien](https://github.com/pengzhanbo) `code en ligne`
 
 ```js
 const a = 1
@@ -255,7 +255,7 @@ const c = a + b
 
 :::
 
-**GFM alert：**
+**Alerte GFM：**
 
 > [!note]
 > note
@@ -264,20 +264,20 @@ const c = a + b
 > info
 
 > [!tip]
-> tip
+> astuce
 
 > [!warning]
-> warning
+> avertissement
 
 > [!caution]
-> caution
+> prudence
 
 > [!important]
 > important
 
-**code demo:**
+**démo de code:**
 
-:::: demo title="Demo" desc="A normal demo"
+:::: demo title="Démo" desc="Une démo normale"
 
 ::: code-tabs
 @tab HTML
@@ -291,7 +291,7 @@ const c = a + b
 @tab Javascript
 
 ```js
-const a = 'So Awesome!'
+const a = 'Tellement génial !'
 const app = document.querySelector('#app')
 app.appendChild(window.document.createElement('small')).textContent = a
 ```
@@ -308,38 +308,38 @@ app.appendChild(window.document.createElement('small')).textContent = a
 :::
 ::::
 
-**tab card：**
+**onglet carte：**
 
 ::: tabs
-@tab title 1
-content block
+@tab titre 1
+bloc de contenu
 
-@tab title 2
-content block
+@tab titre 2
+bloc de contenu
 :::
 
 :::: warning
 ::: tabs
-@tab title 1
-content block
+@tab titre 1
+bloc de contenu
 
-@tab title 2
-content block
+@tab titre 2
+bloc de contenu
 :::
 ::::
 
-**footnote：**
+**note de bas de page：**
 
-footnote 1 link[^first]。
+lien note de bas de page 1[^first]。
 
-footnote 2 link[^second]。
+lien note de bas de page 2[^second]。
 
-inline footnote ^[^first] definition。
+note de bas de page en ligne ^[^first] définition。
 
-Repeated footnote definition[^second]。
+Définition répétée de note de bas de page[^second]。
 
-[^first]: footnote **you can contain special mark**
+[^first]: note de bas de page **vous pouvez contenir une marque spéciale**
 
-    also can contain paragraph
+    peut aussi contenir un paragraphe
 
-[^second]: footnote content.
+[^second]: contenu de la note

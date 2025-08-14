@@ -8,13 +8,13 @@ config:
     background: tint-plate
     hero:
       name: Ikimukticom
-      tagline: Your Gateway to Digital Productivity
-      text: Knowledge Hub for Digital Productivity
+      tagline: Ваш путь к цифровой продуктивности
+      text: Центр знаний по цифровой продуктивности
       actions:
         -
           theme: brand
-          text: Blog
-          link: /blog/
+          text: Блог
+          link: /ru/blog/
         -
           theme: alt
           text: Github →

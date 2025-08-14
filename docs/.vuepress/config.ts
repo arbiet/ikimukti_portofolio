@@ -7,45 +7,188 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
+import type { SocialLink, SocialLinkIcon } from 'vuepress-theme-plume'
+import type { Page } from 'vuepress'
 
-// Note: Imports for vite-plugin-static-copy and node-polyfills are kept for potential use.
-import { viteStaticCopy } from 'vite-plugin-static-copy'
-import { dirname, join } from 'path'
-import { fileURLToPath } from 'url'
-import { nodePolyfills } from 'vite-plugin-node-polyfills'
-
-// --- Data for Main Locales ---
-const mainLocaleData = {
-  en: { path: '/', lang: 'en-US', description: 'Pusat Pengetahuan untuk Produktivitas Digital' },
-  zh: { path: '/zh/', lang: 'zh-CN', description: '数字生产力知识中心' },
-  de: { path: '/de/', lang: 'de-DE', description: 'Wissenszentrum für digitale Produktivität' },
-  ru: { path: '/ru/', lang: 'ru-RU', description: 'Центр знаний для цифровой продуктивности' },
-  fr: { path: '/fr/', lang: 'fr-FR', description: 'Centre de connaissances pour la productivité numérique' },
-  ja: { path: '/ja/', lang: 'ja-JP', description: 'デジタル生産性のための知識センター' },
+// --- Konfigurasi Terpusat untuk Multi-Bahasa ---
+const localesConfig = {
+  en: {
+    path: '/',
+    lang: 'en-US',
+    description: 'Pusat Pengetahuan untuk Produktivitas Digital',
+    copyCode: 'Copy',
+    search: {
+      placeholder: 'Search',
+      buttonText: 'Search',
+      backButtonTitle: 'Back to Search',
+      footer: {
+        closeKeyAriaLabel: 'Close Search',
+        closeText: 'Close',
+        navigateDownKeyAriaLabel: 'Navigate Down',
+        navigateText: 'Navigate',
+        navigateUpKeyAriaLabel: 'Navigate Up',
+        selectKeyAriaLabel: 'Select Result',
+        selectText: 'Select',
+      },
+    },
+  },
+  zh: {
+    path: '/zh/',
+    lang: 'zh-CN',
+    description: '数字生产力知识中心',
+    copyCode: '复制',
+    search: {
+      placeholder: '搜索',
+      buttonText: '搜索',
+      backButtonTitle: '返回搜索',
+      footer: {
+        closeKeyAriaLabel: '关闭搜索',
+        closeText: '关闭',
+        navigateDownKeyAriaLabel: '向下导航',
+        navigateText: '导航',
+        navigateUpKeyAriaLabel: '向上导航',
+        selectKeyAriaLabel: '选择结果',
+        selectText: '选择',
+      },
+    },
+  },
+  de: {
+    path: '/de/',
+    lang: 'de-DE',
+    description: 'Wissenszentrum für digitale Produktivität',
+    copyCode: 'Kopieren',
+    search: {
+      placeholder: 'Suche',
+      buttonText: 'Suche',
+      backButtonTitle: 'Zurück zur Suche',
+      footer: {
+        closeKeyAriaLabel: 'Suche schließen',
+        closeText: 'Schließen',
+        navigateDownKeyAriaLabel: 'Nach unten navigieren',
+        navigateText: 'Navigieren',
+        navigateUpKeyAriaLabel: 'Nach oben navigieren',
+        selectKeyAriaLabel: 'Ergebnis auswählen',
+        selectText: 'Auswählen',
+      },
+    },
+  },
+  ru: {
+    path: '/ru/',
+    lang: 'ru-RU',
+    description: 'Центр знаний для цифровой продуктивности',
+    copyCode: 'Копировать',
+    search: {
+      placeholder: 'Поиск',
+      buttonText: 'Поиск',
+      backButtonTitle: 'Назад к поиску',
+      footer: {
+        closeKeyAriaLabel: 'Закрыть поиск',
+        closeText: 'Закрыть',
+        navigateDownKeyAriaLabel: 'Навигация вниз',
+        navigateText: 'Навигация',
+        navigateUpKeyAriaLabel: 'Навигация вверх',
+        selectKeyAriaLabel: 'Выбрать результат',
+        selectText: 'Выбрать',
+      },
+    },
+  },
+  fr: {
+    path: '/fr/',
+    lang: 'fr-FR',
+    description: 'Centre de connaissances pour la productivité numérique',
+    copyCode: 'Copier',
+    search: {
+      placeholder: 'Recherche',
+      buttonText: 'Recherche',
+      backButtonTitle: 'Retour à la recherche',
+      footer: {
+        closeKeyAriaLabel: 'Fermer la recherche',
+        closeText: 'Fermer',
+        navigateDownKeyAriaLabel: 'Naviguer vers le bas',
+        navigateText: 'Naviguer',
+        navigateUpKeyAriaLabel: 'Naviguer vers le haut',
+        selectKeyAriaLabel: 'Sélectionner le résultat',
+        selectText: 'Sélectionner',
+      },
+    },
+  },
+  ja: {
+    path: '/ja/',
+    lang: 'ja-JP',
+    description: 'デジタル生産性のための知識センター',
+    copyCode: 'コピー',
+    search: {
+      placeholder: '検索',
+      buttonText: '検索',
+      backButtonTitle: '検索に戻る',
+      footer: {
+        closeKeyAriaLabel: '検索を閉じる',
+        closeText: '閉じる',
+        navigateDownKeyAriaLabel: '下に移動',
+        navigateText: '移動',
+        navigateUpKeyAriaLabel: '上に移動',
+        selectKeyAriaLabel: '結果を選択',
+        selectText: '選択',
+      },
+    },
+  },
 };
 
-// --- Dynamically generate the main locales block ---
+// --- Hasilkan konfigurasi dari objek terpusat ---
 const generatedLocales = Object.fromEntries(
-  Object.values(mainLocaleData).map(data => [
-    data.path,
+  Object.values(localesConfig).map(cfg => [
+    cfg.path,
     {
-      title: 'ikimukticom', // Common title for all locales
-      lang: data.lang,
-      description: data.description,
+      title: 'ikimukticom',
+      lang: cfg.lang,
+      description: cfg.description,
     }
   ])
 );
 
-// --- Data for Copy Code Locales ---
-const copyCodeLocales = {
-  '/': { copy: 'Copy' },
-  '/zh/': { copy: '复制' },
-  '/de/': { copy: 'Kopieren' },
-  '/ru/': { copy: 'Копировать' },
-  '/fr/': { copy: 'Copier' },
-  '/ja/': { copy: 'コピー' },
+const copyCodeLocales = Object.fromEntries(
+  Object.values(localesConfig).map(cfg => [cfg.path, { copy: cfg.copyCode }])
+);
+
+const searchLocales = Object.fromEntries(
+  Object.values(localesConfig).map(cfg => [cfg.path, cfg.search])
+);
+
+// --- Fungsi utilitas untuk pencarian agar tidak duplikat (DRY) ---
+const processSearchTerm = (term: string) => term.replace(/[\u200B-\u200D\uFEFF]/g, '');
+const tokenizeSearchText = (text: string) => text.split(/\s+/).filter(token => token.length > 0);
+
+// --- Data untuk ikon code-tabs agar lebih mudah dikelola ---
+const codeTabIcons = {
+  python: 'py', javascript: 'js', typescript: 'ts', java: 'java',
+  csharp: 'cs', cpp: 'cpp', go: 'go', rust: 'rs', kotlin: 'kt',
+  php: 'php', ruby: 'rb', bash: 'sh', html: 'html', css: 'css',
+  json: 'json', yaml: 'yaml',
 };
 
+// --- Data untuk link sosial media agar config utama lebih rapi ---
+const socialLinks: SocialLink[] = [
+    { icon: 'github' as SocialLinkIcon, link: 'https://github.com/ikimukticom' },
+    { icon: 'twitter' as SocialLinkIcon, link: 'https://twitter.com/ikimukticom' },
+    { icon: 'facebook' as SocialLinkIcon, link: 'https://facebook.com/ikimukticom' },
+    { icon: 'instagram' as SocialLinkIcon, link: 'https://instagram.com/ikimukticom' },
+    { icon: 'linkedin' as SocialLinkIcon, link: 'https://linkedin.com/company/ikimukticom' },
+    { icon: 'youtube' as SocialLinkIcon, link: 'https://youtube.com/@ikimukticom' },
+    { icon: 'mastodon' as SocialLinkIcon, link: 'https://mastodon.social/@ikimukticom' },
+    { icon: 'bilibili' as SocialLinkIcon, link: 'https://space.bilibili.com/ikimukticom' },
+    { icon: 'discord' as SocialLinkIcon, link: 'https://discord.gg/ikimukticom' },
+    { icon: 'slack' as SocialLinkIcon, link: 'https://slack.com/ikimukticom' },
+    { icon: 'weibo' as SocialLinkIcon, link: 'https://weibo.com/ikimukticom' },
+    { icon: 'qq' as SocialLinkIcon, link: 'https://qq.com/ikimukticom' },
+    { icon: 'douban' as SocialLinkIcon, link: 'https://douban.com/ikimukticom' },
+    { icon: 'zhihu' as SocialLinkIcon, link: 'https://zhihu.com/ikimukticom' },
+    { icon: 'gitlab' as SocialLinkIcon, link: 'https://gitlab.com/ikimukticom' },
+    { icon: 'docker' as SocialLinkIcon, link: 'https://hub.docker.com/u/ikimukticom' },
+    { icon: 'juejin' as SocialLinkIcon, link: 'https://juejin.cn/user/ikimukticom' },
+    { icon: 'stackoverflow' as SocialLinkIcon, link: 'https://stackoverflow.com/users/ikimukticom' },
+    { icon: 'steam' as SocialLinkIcon, link: 'https://steamcommunity.com/id/ikimukticom' },
+    { icon: 'xbox' as SocialLinkIcon, link: 'https://xbox.com/profile/ikimukticom' },
+];
 
 export default defineUserConfig({
   base: '/',
@@ -56,22 +199,14 @@ export default defineUserConfig({
     ['link', { rel: 'icon', type: 'image/png', href: '/image/favicon-32x32.png' }],
   ],
 
-  bundler: viteBundler({
-    viteOptions: {},
-    vuePluginOptions: {},
-  }),
-
+  bundler: viteBundler(),
   shouldPrefetch: false,
 
-  // The plumeTheme block contains default settings.
-  // Your `plume.config.ts` file will override these settings for each locale.
   theme: plumeTheme({
     hostname: 'https://ikimukti.com',
     docsRepo: 'https://github.com/arbiet/ikimukti_portofolio',
     docsDir: 'docs',
-    docsBranch: '',
     editLink: true,
-    lastUpdated: {},
     contributors: {
       mode: 'inline',
       info: [{ username: 'ikimukticom', alias: ['Ikimukti.com'] }]
@@ -86,28 +221,7 @@ export default defineUserConfig({
       circle: true,
       layout: 'right',
     },
-    social: [
-      { icon: 'github', link: 'https://github.com/ikimukticom' },
-      { icon: 'twitter', link: 'https://twitter.com/ikimukticom' },
-      { icon: 'facebook', link: 'https://facebook.com/ikimukticom' },
-      { icon: 'instagram', link: 'https://instagram.com/ikimukticom' },
-      { icon: 'linkedin', link: 'https://linkedin.com/company/ikimukticom' },
-      { icon: 'youtube', link: 'https://youtube.com/@ikimukticom' },
-      { icon: 'mastodon', link: 'https://mastodon.social/@ikimukticom' },
-      { icon: 'bilibili', link: 'https://space.bilibili.com/ikimukticom' },
-      { icon: 'discord', link: 'https://discord.gg/ikimukticom' },
-      { icon: 'slack', link: 'https://slack.com/ikimukticom' },
-      { icon: 'weibo', link: 'https://weibo.com/ikimukticom' },
-      { icon: 'qq', link: 'https://qq.com/ikimukticom' },
-      { icon: 'douban', link: 'https://douban.com/ikimukticom' },
-      { icon: 'zhihu', link: 'https://zhihu.com/ikimukticom' },
-      { icon: 'gitlab', link: 'https://gitlab.com/ikimukticom' },
-      { icon: 'docker', link: 'https://hub.docker.com/u/ikimukticom' },
-      { icon: 'juejin', link: 'https://juejin.cn/user/ikimukticom' },
-      { icon: 'stackoverflow', link: 'https://stackoverflow.com/users/ikimukticom' },
-      { icon: 'steam', link: 'https://steamcommunity.com/id/ikimukticom' },
-      { icon: 'xbox', link: 'https://xbox.com/profile/ikimukticom' },
-    ],
+    social: socialLinks,
     copyright: {
       license: { name: 'CC BY-NC-SA 4.0', url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/' },
       author: { name: 'Ikimukti', url: 'https://ikimukti.com' },
@@ -128,8 +242,8 @@ export default defineUserConfig({
         imageSize: true,
         codeTabs: {
           icon: {
-            named: ['python', 'javascript', 'typescript', 'java', 'csharp', 'cpp', 'go', 'rust', 'kotlin', 'php', 'ruby', 'bash', 'html', 'css', 'json', 'yaml'],
-            extensions: ['py', 'js', 'ts', 'java', 'cs', 'cpp', 'go', 'rs', 'kt', 'php', 'rb', 'sh', 'html', 'css', 'json', 'yaml'],
+            named: Object.keys(codeTabIcons),
+            extensions: Object.values(codeTabIcons),
           }
         }
       },
@@ -165,6 +279,17 @@ export default defineUserConfig({
       categories: true,
       postCover: { layout: 'left', ratio: '16:9', width: 300, compact: true },
       pagination: 15,
+      archivesLink: '/archives/',
+      categoriesLink: '/categories/',
+      tagsLink: '/tags/',
+      categoriesExpand: "deep",
+      tagsTheme: 'colored',
+      categoriesTransform(categories) {
+        return categories.map(category => ({
+          ...category,
+          name: category.name.replace(/-/g, ' '),
+        }));
+      },
     },
     article: '/article/',
     cache: 'filesystem',
@@ -173,7 +298,36 @@ export default defineUserConfig({
       createTime: true,
       title: true,
     },
-    search: { provider: 'local' },
+    // [PERBAIKAN DI SINI]
+    search: {
+      provider: 'local',
+      disableQueryPersistence: true,
+      isSearchable: (page: Page) => page.frontmatter.searchable !== false && page.path !== '/404.html',
+      locales: searchLocales,
+      miniSearch: {
+        options: {
+          extractField: (doc: any, fieldName: string) => {
+            if (fieldName === 'content' && doc.content) {
+              return doc.content.replace(/<[^>]+>/g, '');
+            }
+            return doc[fieldName] || '';
+          },
+          processTerm: processSearchTerm,
+          tokenize: tokenizeSearchText,
+        },
+        searchOptions: {
+          weights: { fuzzy: 0.1, prefix: 0.2 },
+          tokenize: tokenizeSearchText,
+          processTerm: processSearchTerm,
+          prefix: true,
+          fuzzy: (term) => term.length <= 3,
+          filter: result => result.score > 0.1,
+          combineWith: 'OR',
+          boostTerm: (term, i, terms) => 1 + (terms.length - i) * 0.1,
+          boostDocument: (docId, term, storedFields) => (storedFields?.content?.includes(term) ? 1.5 : 1.0),
+        }
+      }
+    },
     codeHighlighter: {
       twoslash: true,
       whitespace: true,
@@ -181,10 +335,7 @@ export default defineUserConfig({
     },
     readingTime: {},
     markdown: {
-      pdf: true,
-      plot: true,
-      bilibili: true,
-      youtube: true,
+      pdf: true, plot: true, bilibili: true, youtube: true,
       icon: { provider: 'iconify' },
       table: { copy: true },
       repl: { python: true },
@@ -204,12 +355,13 @@ export default defineUserConfig({
       inputPosition: 'top',
       strict: true,
       lazyLoading: true,
+      delay: 500,
     },
     appearance: "dark",
     copyCode: {
       duration: 300,
       showInMobile: true,
-      locales: copyCodeLocales, // Using the simplified locales object
+      locales: copyCodeLocales,
     },
     createTime: true,
     darkModeSwitchTitle: 'Switch to Dark Mode',
@@ -220,4 +372,4 @@ export default defineUserConfig({
     },
     returnToTopLabel: 'To Top',
   }),
-})
+});

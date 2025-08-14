@@ -7,16 +7,16 @@ config:
     full: true
     background: tint-plate
     hero:
-      name: Theme Plume
-      tagline: Tema VuePress Generasi Berikutnya
-      text: Sederhana, kaya fitur, untuk dokumentasi & blog
+      name: Ikimukticom
+      tagline: Your Gateway to Digital Productivity
+      text: Knowledge Hub for Digital Productivity
       actions:
         -
           theme: brand
           text: Blog
-          link: /id/blog/
+          link: /blog/
         -
           theme: alt
           text: Github →
-          link: https://github.com/pengzhanbo/vuepress-theme-plume
+          link: https://github.com/ikimukticom
 ---

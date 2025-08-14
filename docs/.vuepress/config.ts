@@ -324,7 +324,7 @@ export default defineUserConfig({
           filter: result => result.score > 0.1,
           combineWith: 'OR',
           boostTerm: (term, i, terms) => 1 + (terms.length - i) * 0.1,
-          boostDocument: (docId, term, storedFields) => (storedFields?.content?.includes(term) ? 1.5 : 1.0),
+          boostDocument: (docId, term, storedFields) => (typeof storedFields?.content === 'string' && storedFields.content.includes(term) ? 1.5 : 1.0),
         }
       }
     },

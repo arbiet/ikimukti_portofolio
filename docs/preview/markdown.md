@@ -13,6 +13,7 @@ tags:
   - markdown
   - syntax
   - formatting
+  - news
 index: true
 author:
   - name: "Firmansyah Mukti Wijaya"

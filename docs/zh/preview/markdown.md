@@ -1,105 +1,111 @@
 ---
-title: Markdown 日本語
+title: Markdown 中文
+createTime: 2025/08/03 23:10:52
+permalink: /article/7phxj1n7/
+icon: article
+cover: /image/cover.png
+category:
+  - 文档
+  - 指南
+  - 教程
+  - 最佳实践
 tags:
   - markdown
-createTime: 2025/08/03 23:10:52
-permalink: /zh/article/sprilind/
+  - 语法
+  - 格式化
+  - 新闻
+index: true
+author:
+  - name: "Firmansyah Mukti Wijaya"
+    email: "ikimukti@gmail.com"
+    url: "https://ikimukti.com"
+  - name: "Ikimukti"
+    email: "info@ikimukti.com"
+    url: "https://ikimukti.com"
+lang: zh-CN
+sticky: true
+draft: false
+excerpt: "学习 Markdown 语法和格式化的基础知识。使用 Markdown，您可以轻松格式化文本、创建列表、添加图片等。"
 ---
 
-## 見出しH2
+## 二级标题
 
-### 見出しH3
+### 三级标题
 
-#### 見出しH4
+#### 四级标题
 
-##### 見出しH5
+##### 五级标题
 
-###### 見出しH6
+###### 六级标题
 
-## 見出し2 バッジ <Badge type="tip" text="バッジ" />
+加粗：**加粗文本**
 
-### 見出し3 バッジ <Badge type="warning" text="バッジ" />
+斜体：_斜体文本_
 
-#### 見出し4 バッジ <Badge type="danger" text="バッジ" />
+~~删除文本~~
 
-本文内容。
+内容 ==高亮==
 
-`@property` CSS at-ruleは [CSS Houdini API](https://developer.mozilla.org/ja/docs/Web/Guide/Houdini)
-の一部であり、開発者が [CSSカスタムプロパティ](https://developer.mozilla.org/ja/docs/Web/CSS/--*)
-を明示的に定義でき、型チェック、デフォルト値の設定、継承可否の指定が可能です。
-
-`@property` の登場により、CSSの機能が大幅に強化されました。
-
-太字：**太字テキスト**
-
-斜体： _斜体テキスト_
-
-~~取り消し線テキスト~~
-
-内容 ==マーク==
-
-数式表現： $-(2^{n-1})$ ~ $2^{n-1} -1$
+数学表达式：$-(2^{n-1})$ ~ $2^{n-1} -1$
 
 $\frac {\partial^r} {\partial \omega^r} \left(\frac {y^{\omega}} {\omega}\right)
 = \left(\frac {y^{\omega}} {\omega}\right) \left\{(\log y)^r + \sum_{i=1}^r \frac {(-1)^ Ir \cdots (r-i+1) (\log y)^{ri}} {\omega^i} \right\}$
 
-19^番目^
+19^次^
 
 H~2~O
 
 ::: center
-中央揃えの内容
+内容居中
 :::
 
 ::: right
-右揃えの内容
+内容右对齐
 :::
 
-- 箇条書き1
-- 箇条書き2
-- 箇条書き3
+- 无序列表 1
+- 无序列表 2
+- 无序列表 3
 
-1. 番号付きリスト1
-2. 番号付きリスト2
-3. 番号付きリスト3
+1. 有序列表 1
+2. 有序列表 2
+3. 有序列表 3
 
-- [ ] タスクリスト1
-- [ ] タスクリスト2
-- [x] タスクリスト3
-- [x] タスクリスト4
+- [ ] 任务列表 1
+- [ ] 任务列表 2
+- [x] 任务列表 3
+- [x] 任务列表 4
 
-| テーブル        | は           | クール  |
-| ------------- |:-------------:| -----:|
-| col 3は      | 右寄せ        | $1600 |
-| col 2は      | 中央揃え      |   $12 |
-| ゼブラストライプ | すごい      |    $1 |
+| 表格        | 是           | 很酷  |
+| ----------- |:-----------:| -----:|
+| 第3列       | 右对齐      | $1600 |
+| 第2列       | 居中        |   $12 |
+| 斑马条纹    | 很整齐      |    $1 |
 
 > 引用内容
 >
 > 引用内容
 
-[リンク](/)
+[链接](/)
 
-[外部リンク](https://github.com/pengzhanbo)
+[外部链接](https://github.com/pengzhanbo)
 
-![plume](/plume.svg)
+**徽章：**
 
-**バッジ：**
+- <Badge type="info" text="信息徽章" />
+- <Badge type="tip" text="提示徽章" />
+- <Badge type="warning" text="警告徽章" />
+- <Badge type="danger" text="危险徽章" />
 
-- <Badge type="info" text="infoバッジ" />
-- <Badge type="tip" text="tipバッジ" />
-- <Badge type="warning" text="warningバッジ" />
-- <Badge type="danger" text="dangerバッジ" />
-
-**アイコン：**
+**图标：**
 
 - home - <Icon name="material-symbols:home" color="currentColor" size="1em" />
 - vscode - <Icon name="skill-icons:vscode-dark" size="2em" />
 - twitter - <Icon name="skill-icons:twitter" size="2em" />
 
-**デモラッパー：**
+**演示包装器：**
 
-::: demo-wrapper title="サンプル" no-padding height="200px"
+::: demo-wrapper title="演示" no-padding height="200px"
 <style scoped>
 .open-door {
   display: flex;
@@ -112,13 +118,13 @@ H~2~O
 </style>
 
 <div class="open-door">
-  <div class="main">メイン</div>
-  <div class="aside">サイド</div>
+  <div class="main">主内容</div>
+  <div class="aside">侧边栏</div>
 </div>
 
 :::
 
-**コード：**
+**代码块：**
 
 ```js whitespace
 const a = 1
@@ -131,7 +137,7 @@ const obj = {
     deep: {
       deep: {
         deep: {
-          value: 'これはとても長いテキストです。これはとても長いテキストです。これはとても長いテキストです。これはとても長いテキストです。', // [!code highlight]
+          value: '这是一段很长的文本。这是一段很长的文本。这是一段很长的文本。这是一段很长的文本。', // [!code highlight]
         }
       }
     }
@@ -139,72 +145,10 @@ const obj = {
 }
 ```
 
-**コードブロック TwoSlash：**
-
-```ts twoslash
-// @errors: 2339
-const welcome = 'Tudo bem gente?'
-const words = welcome.contains(' ')
-```
-
-```ts twoslash
-import express from 'express'
-const app = express()
-app.get('/', (req, res) => {
-  res.send
-})
-app.listen(3000)
-```
-
-```ts twoslash
-import { createHighlighter } from 'shiki'
-
-const highlighter = await createHighlighter({ themes: ['nord'], langs: ['javascript'] })
-// @log: カスタムログメッセージ
-const a = 1
-// @error: カスタムエラーメッセージ
-const b = 1
-// @warn: カスタム警告メッセージ
-const c = 1
-// @annotate: カスタム注釈メッセージ
-```
-
-```ts twoslash
-// @errors: 2540
-interface Todo {
-  title: string
-}
-
-const todo: Readonly<Todo> = {
-  title: 'Delete inactive users'.toUpperCase(),
-//  ^?
-}
-
-todo.title = 'Hello'
-
-Number.parseInt('123', 10)
-//      ^|
-
-//
-//
-```
-
-```vue twoslash
-<script setup lang="ts">
-import { ref } from 'vue'
-
-const count = ref(0)
-</script>
-
-<template>
-  <p>{{ count }}</p>
-</template>
-```
-
-**コードグループ：**
+**代码分组：**
 
 ::: code-tabs
-@tab タブ1
+@tab tab1
 
 ```js
 const a = 1
@@ -212,7 +156,7 @@ const b = 2
 const c = a + b
 ```
 
-@tab タブ2
+@tab tab2
 
 ```ts
 const a: number = 1
@@ -222,7 +166,7 @@ const c: number = a + b
 
 :::
 
-**コードブロックハイライト：**
+**代码高亮：**
 
 ```ts
 function foo() {
@@ -238,7 +182,7 @@ function foo() {
 }
 ```
 
-**コードブロックフォーカス：**
+**代码聚焦：**
 
 ```ts
 function foo() {
@@ -246,11 +190,8 @@ function foo() {
 }
 ```
 
-::: tip タイトルのみ
-:::
-
-::: note 注釈
-注釈内容 [link](https://github.com/pengzhanbo) `インラインコード`
+::: note
+注释内容 [链接](https://github.com/pengzhanbo) `内联代码`
 
 ```js
 const a = 1
@@ -260,8 +201,8 @@ const c = a + b
 
 :::
 
-::: info 情報
-情報内容 [link](https://github.com/pengzhanbo) `インラインコード`
+::: info
+信息内容 [链接](https://github.com/pengzhanbo) `内联代码`
 
 ```js
 const a = 1
@@ -271,8 +212,8 @@ const c = a + b
 
 :::
 
-::: tip ヒント
-ヒント内容 [link](https://github.com/pengzhanbo) `インラインコード`
+::: tip
+提示内容 [链接](https://github.com/pengzhanbo) `内联代码`
 
 ```js
 const a = 1
@@ -282,8 +223,8 @@ const c = a + b
 
 :::
 
-::: warning 警告
-警告内容 [link](https://github.com/pengzhanbo) `インラインコード`
+::: warning
+警告内容 [链接](https://github.com/pengzhanbo) `内联代码`
 
 ```js
 const a = 1
@@ -293,8 +234,8 @@ const c = a + b
 
 :::
 
-::: caution エラー
-エラー内容 [link](https://github.com/pengzhanbo) `インラインコード`
+::: caution
+注意内容 [链接](https://github.com/pengzhanbo) `内联代码`
 
 ```js
 const a = 1
@@ -304,8 +245,8 @@ const c = a + b
 
 :::
 
-::: important 重要
-重要内容 [link](https://github.com/pengzhanbo) `インラインコード`
+::: important
+重要内容 [链接](https://github.com/pengzhanbo) `内联代码`
 
 ```js
 const a = 1
@@ -315,21 +256,16 @@ const c = a + b
 
 :::
 
-::: details 詳細タイトル
-
-ここに内容があります。
-:::
-
-**GFMアラート：**
+**GFM 警告：**
 
 > [!note]
-> ノート
+> 注释
 
 > [!info]
-> 情報
+> 信息
 
 > [!tip]
-> ヒント
+> 提示
 
 > [!warning]
 > 警告
@@ -340,9 +276,9 @@ const c = a + b
 > [!important]
 > 重要
 
-**コードデモ：**
+**代码演示：**
 
-:::: demo title="一般的なサンプル" desc="一般的なサンプルです"
+:::: demo title="演示" desc="一个普通的演示"
 
 ::: code-tabs
 @tab HTML
@@ -356,7 +292,7 @@ const c = a + b
 @tab Javascript
 
 ```js
-const a = 'とても素晴らしい！'
+const a = '太棒了！'
 const app = document.querySelector('#app')
 app.appendChild(window.document.createElement('small')).textContent = a
 ```
@@ -373,38 +309,38 @@ app.appendChild(window.document.createElement('small')).textContent = a
 :::
 ::::
 
-**タブ：**
+**标签卡片：**
 
 ::: tabs
-@tab タイトル1
-内容ブロック
+@tab 标题 1
+内容块
 
-@tab タイトル2
-内容ブロック
+@tab 标题 2
+内容块
 :::
 
 :::: warning
 ::: tabs
-@tab タイトル1
-内容ブロック
+@tab 标题 1
+内容块
 
-@tab タイトル2
-内容ブロック
+@tab 标题 2
+内容块
 :::
 ::::
 
 **脚注：**
 
-脚注1リンク[^first]。
+脚注 1 链接[^first]。
 
-脚注2リンク[^second]。
+脚注 2 链接[^second]。
 
-インライン脚注^[インライン脚注テキスト] の定義。
+内联脚注 ^[^first] 定义。
 
-重複した脚注定義[^second]。
+重复脚注定义[^second]。
 
-[^first]: 脚注 **には特別なマークを含めることができます**
+[^first]: 脚注 **可以包含特殊标记**
 
-    複数の段落で構成することもできます
+    也可以包含段落
 
-[^second]: 脚注文字。
+[^second]: 脚注内容

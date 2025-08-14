@@ -13,6 +13,7 @@ tags:
   - markdown
   - 语法
   - 格式化
+  - ニュース
 index: true
 author:
   - name: "Firmansyah Mukti Wijaya"

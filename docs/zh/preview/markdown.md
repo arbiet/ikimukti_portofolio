@@ -1,7 +1,7 @@
 ---
 title: Markdown 中文
 createTime: 2025/08/03 23:10:52
-permalink: /article/7phxj1n7/
+permalink: /zh/article/7phxj1n7/
 icon: article
 cover: /image/cover.png
 category:

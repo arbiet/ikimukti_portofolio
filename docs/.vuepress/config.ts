@@ -9,6 +9,8 @@ import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
 import type { SocialLink, SocialLinkIcon } from 'vuepress-theme-plume'
 import type { Page } from 'vuepress'
+import { visualizer } from 'rollup-plugin-visualizer'
+import { cachePlugin } from '@vuepress/plugin-cache'
 
 // --- Konfigurasi Terpusat untuk Multi-Bahasa ---
 const localesConfig = {
@@ -196,7 +198,7 @@ export default defineUserConfig({
   locales: generatedLocales,
 
   head: [
-    ['link', { rel: 'icon', type: 'image/png', href: '/image/favicon-32x32.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/image/favicon-48x48.png' }],
   ],
 
   bundler: viteBundler(),
@@ -239,7 +241,7 @@ export default defineUserConfig({
     },
     plugins: {
       markdownPower: {
-        imageSize: true,
+        imageSize: 'all',
         codeTabs: {
           icon: {
             named: Object.keys(codeTabIcons),
@@ -260,11 +262,41 @@ export default defineUserConfig({
         canonical: page => `https://ikimukti.com${page.path}`,
         ogp: (ogp, page) => ({
           ...ogp,
-          title: page.frontmatter.title || 'Ikimukti.com - Pusat Pengetahuan untuk Produktivitas Digital',
-          description: page.frontmatter.description || 'Ikimukti.com adalah pusat pengetahuan untuk produktivitas digital. Temukan artikel, tutorial, dan tips terbaru tentang teknologi, produktivitas, dan inovasi digital.',
-          image: `https://ikimukti.com${page.frontmatter.image || '/favicon-32x32.png'}`,
+          title: page.frontmatter.title || 'Ikimukti.com - Knowledge Center for Digital Productivity',
+          description: page.frontmatter.description || 'Ikimukti.com is a knowledge center for digital productivity, providing resources and information to help you enhance your productivity in the digital world.',
+          image: `https://ikimukti.com${page.frontmatter.cover || '/favicon-48x48.png'}`,
           type: 'website',
           url: `https://ikimukti.com${page.path}`,
+          site_name: 'Ikimukti.com',
+          // fbAppId: '1234567890',
+          locale: page.frontmatter.lang || 'en-US',
+          locale_alternate: Object.keys(generatedLocales).map(locale => ({
+            lang: generatedLocales[locale].lang,
+            url: `https://ikimukti.com${locale === '/' ? '' : locale}`,
+          })),
+          rich_attachment: page.frontmatter.richAttachments || [],
+          updated_time: page.frontmatter.updateTime || new Date().toISOString(),
+          twitter: {
+            creator: '@ikimukticom',
+            image: {
+              alt: page.frontmatter.title || 'Ikimukti.com - Knowledge Center for Digital Productivity',
+            },
+            site: 'https://ikimukti.com',
+            card: 'summary_large_image',
+          },
+          article: {
+            author: page.frontmatter.author || 'Ikimukti',
+            expiration_time: page.frontmatter.expirationTime || new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString(),
+            modified_time: page.frontmatter.updateTime || new Date().toISOString(),
+            published_time: page.frontmatter.createTime || new Date().toISOString(),
+            section: page.frontmatter.category || 'General',
+            tags: page.frontmatter.tags || [],
+          },
+          audio: page.frontmatter.audio || [],
+          video: page.frontmatter.video || [],
+          determiner: page.frontmatter.determiner || 'auto',
+          keywords: page.frontmatter.keywords || [],
+          robots: page.frontmatter.robots || 'index, follow',
         }),
       },
       sitemap: {

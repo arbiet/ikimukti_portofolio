@@ -117,7 +117,7 @@ const generatedLocales = Object.fromEntries(
 
 export default defineThemeConfig({
   // Global configurations
-  logo: '/image/favicon-32x32.png',
+  logo: '/image/favicon-48x48.png',
   appearance: true,
   social: [{ icon: 'github', link: '/' }],
   navbarSocialInclude: ['github'],

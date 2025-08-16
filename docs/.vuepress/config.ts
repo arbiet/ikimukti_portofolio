@@ -240,6 +240,21 @@ export default defineUserConfig({
     ['meta', { name: 'yandex-verification', content: 'b7d4fe28c3d29dd2' }],
     ['meta', { name: 'naver-site-verification', content: '70ef6d5bfc1bba6db665b2fdba6ab2afd49f993f' }],
     ['meta', { name: 'p:domain_verify', content: 'bfa2c54f2e4986e4956c14d4fe581412' }],
+    ['script', { async: true, src: 'https://news.google.com/swg/js/v1/swg-basic.js' , type: 'application/javascript' }],
+    [
+      'script',
+      {},
+      `
+        (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
+          basicSubscriptions.init({
+            type: "NewsArticle",
+            isPartOfType: ["Product"],
+            isPartOfProductId: "CAowkMq9DA:openaccess",
+            clientOptions: { theme: "light", lang: "id" },
+          });
+        });
+      `
+    ],
   ],
 
   bundler: viteBundler(),
@@ -342,9 +357,40 @@ export default defineUserConfig({
         }),
       },
       sitemap: {
-        changefreq: 'always',
+        devHostname: "http://localhost:8080",
         hostname: 'https://ikimukti.com',
-      }
+        modifyTimeGetter: (page: Page) => String(page.frontmatter.updateTime ?? new Date().toISOString()),
+        sitemapXSLTemplate: `
+          <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+            <xsl:output method="xml" indent="yes"/>
+            <xsl:template match="/">
+              <urlset xmlns="http://www.sitemaps.org/schemas/sitemap-image/1.1">
+                <xsl:apply-templates select="url"/>
+              </urlset>
+            </xsl:template>
+            <xsl:template match="url">
+              <url>
+                <loc><xsl:value-of select="loc"/></loc>
+                <lastmod><xsl:value-of select="lastmod"/></lastmod>
+                <changefreq><xsl:value-of select="changefreq"/></changefreq>
+                <priority><xsl:value-of select="priority"/></priority>
+              </url>
+            </xsl:template>
+          </xsl:stylesheet>
+        `,
+        changefreq: "daily",
+        devServer: true,
+        sitemapFilename: "sitemap.xml",
+        sitemapXSLFilename: "sitemap.xsl",
+        xmlNameSpace: {
+          image:true,
+          news:true,
+          video:true,
+          xhtml:true,
+        },
+        excludePaths: ['/404.html'],
+        extraUrls: [],
+      },
     },
     blog: {
       postList: true,

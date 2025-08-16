@@ -15,6 +15,8 @@ import { openGraphPlugin } from 'vuepress-plugin-open-graph'
 import { pwaPlugin } from '@vuepress/plugin-pwa'
 import { pwaPopupPlugin } from '@vuepress/plugin-pwa-popup'
 import type { PwaPopupPluginOptions } from '@vuepress/plugin-pwa-popup'
+import { webpackBundler } from '@vuepress/bundler-webpack'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
 // --- Konfigurasi Terpusat untuk Multi-Bahasa ---
 const localesConfig = {
@@ -455,5 +457,14 @@ export default defineUserConfig({
     pwaPlugin(),
     // Memanggil pwaPopupPlugin dengan type assertion
     (pwaPopupPlugin as (options: PwaPopupPluginOptions) => any)({}),
+    webpackBundler({
+      plugins: [
+        new BundleAnalyzerPlugin({
+          analyzerMode: 'static',
+          reportFilename: 'bundle-report.html',
+          openAnalyzer: false,
+        }),
+      ],
+    }),
   ],
 });

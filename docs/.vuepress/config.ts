@@ -360,24 +360,6 @@ export default defineUserConfig({
         devHostname: "http://localhost:8080",
         hostname: 'https://ikimukti.com',
         modifyTimeGetter: (page: Page) => String(page.frontmatter.updateTime ?? new Date().toISOString()),
-        sitemapXSLTemplate: `
-          <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-            <xsl:output method="xml" indent="yes"/>
-            <xsl:template match="/">
-              <urlset xmlns="http://www.sitemaps.org/schemas/sitemap-image/1.1">
-                <xsl:apply-templates select="url"/>
-              </urlset>
-            </xsl:template>
-            <xsl:template match="url">
-              <url>
-                <loc><xsl:value-of select="loc"/></loc>
-                <lastmod><xsl:value-of select="lastmod"/></lastmod>
-                <changefreq><xsl:value-of select="changefreq"/></changefreq>
-                <priority><xsl:value-of select="priority"/></priority>
-              </url>
-            </xsl:template>
-          </xsl:stylesheet>
-        `,
         changefreq: "daily",
         devServer: true,
         sitemapFilename: "sitemap.xml",
@@ -388,8 +370,6 @@ export default defineUserConfig({
           video:true,
           xhtml:true,
         },
-        excludePaths: ['/404.html'],
-        extraUrls: [],
       },
     },
     blog: {

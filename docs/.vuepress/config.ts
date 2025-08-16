@@ -238,6 +238,7 @@ export default defineUserConfig({
     ['meta', { name: 'algolia-site-verification', content: '37BAF5981A83D338' }],
     ['meta', { name: 'msvalidate.01', content: '4077B11CAE89D53B7DAE1D82710447B0' }],
     ['meta', { name: 'yandex-verification', content: 'b7d4fe28c3d29dd2' }],
+    ['meta', { name: 'naver-site-verification', content: '70ef6d5bfc1bba6db665b2fdba6ab2afd49f993f' }],
   ],
 
   bundler: viteBundler(),

@@ -11,13 +11,17 @@ import type { SocialLink, SocialLinkIcon } from 'vuepress-theme-plume'
 import type { Page } from 'vuepress'
 import { visualizer } from 'rollup-plugin-visualizer'
 import { cachePlugin } from '@vuepress/plugin-cache'
+import { openGraphPlugin } from 'vuepress-plugin-open-graph'
+import { pwaPlugin } from '@vuepress/plugin-pwa'
+import { pwaPopupPlugin } from '@vuepress/plugin-pwa-popup'
+import type { PwaPopupPluginOptions } from '@vuepress/plugin-pwa-popup'
 
 // --- Konfigurasi Terpusat untuk Multi-Bahasa ---
 const localesConfig = {
   en: {
     path: '/',
     lang: 'en-US',
-    description: 'Pusat Pengetahuan untuk Produktivitas Digital',
+    description: 'Knowledge Hub for Digital Productivity',
     copyCode: 'Copy',
     search: {
       placeholder: 'Search',
@@ -32,6 +36,10 @@ const localesConfig = {
         selectKeyAriaLabel: 'Select Result',
         selectText: 'Select',
       },
+    },
+    pwaPopup: {
+      message: 'New content is available.',
+      buttonText: 'Refresh',
     },
   },
   zh: {
@@ -53,6 +61,10 @@ const localesConfig = {
         selectText: '选择',
       },
     },
+    pwaPopup: {
+      message: '发现新内容。',
+      buttonText: '刷新',
+    },
   },
   de: {
     path: '/de/',
@@ -72,6 +84,10 @@ const localesConfig = {
         selectKeyAriaLabel: 'Ergebnis auswählen',
         selectText: 'Auswählen',
       },
+    },
+    pwaPopup: {
+      message: 'Neuer Inhalt ist verfügbar.',
+      buttonText: 'Aktualisieren',
     },
   },
   ru: {
@@ -93,6 +109,10 @@ const localesConfig = {
         selectText: 'Выбрать',
       },
     },
+    pwaPopup: {
+      message: 'Доступен новый контент.',
+      buttonText: 'Обновить',
+    },
   },
   fr: {
     path: '/fr/',
@@ -112,6 +132,10 @@ const localesConfig = {
         selectKeyAriaLabel: 'Sélectionner le résultat',
         selectText: 'Sélectionner',
       },
+    },
+    pwaPopup: {
+      message: 'Du nouveau contenu est disponible.',
+      buttonText: 'Actualiser',
     },
   },
   ja: {
@@ -133,6 +157,10 @@ const localesConfig = {
         selectText: '選択',
       },
     },
+    pwaPopup: {
+      message: '新しいコンテンツが利用可能です。',
+      buttonText: '更新',
+    },
   },
 };
 
@@ -144,6 +172,8 @@ const generatedLocales = Object.fromEntries(
       title: 'ikimukticom',
       lang: cfg.lang,
       description: cfg.description,
+      cachePlugin: cachePlugin({}),
+      location: 'Indonesia',
     }
   ])
 );
@@ -154,6 +184,10 @@ const copyCodeLocales = Object.fromEntries(
 
 const searchLocales = Object.fromEntries(
   Object.values(localesConfig).map(cfg => [cfg.path, cfg.search])
+);
+
+const pwaPopupLocales = Object.fromEntries(
+  Object.values(localesConfig).map(cfg => [cfg.path, cfg.pwaPopup])
 );
 
 // --- Fungsi utilitas untuk pencarian agar tidak duplikat (DRY) ---
@@ -203,10 +237,11 @@ export default defineUserConfig({
 
   bundler: viteBundler(),
   shouldPrefetch: false,
-
   theme: plumeTheme({
     hostname: 'https://ikimukti.com',
     docsRepo: 'https://github.com/arbiet/ikimukti_portofolio',
+    logo: '/image/favicon-48x48.png',
+    logoDark: '/image/favicon-48x48.png',
     docsDir: 'docs',
     editLink: true,
     contributors: {
@@ -404,4 +439,21 @@ export default defineUserConfig({
     },
     returnToTopLabel: 'To Top',
   }),
+  plugins: [
+    visualizer({
+      filename: 'stats.html',
+      open: true,
+      gzipSize: true,
+      brotliSize: true,
+      template: 'sunburst',
+      sourcemap: true,
+      emitFile: true,
+    }),
+    openGraphPlugin({
+      host: 'https://ikimukti.com',
+    }),
+    pwaPlugin(),
+    // Memanggil pwaPopupPlugin dengan type assertion
+    (pwaPopupPlugin as (options: PwaPopupPluginOptions) => any)({}),
+  ],
 });

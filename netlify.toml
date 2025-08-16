@@ -49,7 +49,18 @@
   for = "/*"
   [headers.values]
     # Kebijakan Keamanan Konten dasar untuk meningkatkan keamanan.
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'"
+    Content-Security-Policy:
+      default-src 'self';
+      script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; # 'unsafe-inline' sering dibutuhkan oleh gaya VuePress/Webpack, target untuk dihilangkan di masa depan.
+      img-src 'self' data: https://www.google-analytics.com;
+      font-src 'self' https://fonts.gstatic.com;
+      connect-src 'self' https://www.google-analytics.com;
+      frame-ancestors 'none'; # Perlindungan kuat terhadap clickjacking
+      form-action 'self';
+      base-uri 'self';
+      object-src 'none'; # Melarang plugin seperti Flash
+      media-src 'self';
     # Mencegah situs dirender dalam iframe.
     X-Frame-Options = "DENY"
     # Mengaktifkan perlindungan XSS bawaan browser.

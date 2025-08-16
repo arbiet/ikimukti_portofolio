@@ -240,6 +240,10 @@ export default defineUserConfig({
     ['meta', { name: 'naver-site-verification', content: '70ef6d5bfc1bba6db665b2fdba6ab2afd49f993f' }],
     ['meta', { name: 'p:domain_verify', content: 'bfa2c54f2e4986e4956c14d4fe581412' }],
     ['script', { async: true, src: 'https://news.google.com/swg/js/v1/swg-basic.js' , type: 'application/javascript' }],
+    ['script-src', { 'self': true, 'https://*.googletagmanager.com': true }],
+    ['img-src', { 'self': true, 'https://*.google-analytics.com': true, 'https://*.googletagmanager.com': true }],
+    ['font-src', { 'self': true, 'data:': true }],
+    [ 'style-src', { 'self': true, 'https://*.googleapis.com': true }],
     [
       'script',
       {},

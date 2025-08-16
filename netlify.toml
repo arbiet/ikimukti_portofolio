@@ -16,7 +16,7 @@
 
 # Variabel lingkungan yang diterapkan ke semua konteks build.
 # Merupakan praktik terbaik untuk mengunci versi Node.js Anda.
-# Ini juga dapat dilakukan dengan file.nvmrc, yang sering kali lebih disukai.
+# Ini juga dapat dilakukan dengan file .nvmrc, yang sering kali lebih disukai.
 [build.environment]
   NODE_VERSION = "20"
 
@@ -48,22 +48,15 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    # Kebijakan Keamanan Konten dasar untuk meningkatkan keamanan.
-    Content-Security-Policy:
-      default-src 'self';
-      script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
-      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; # 'unsafe-inline' sering dibutuhkan oleh gaya VuePress/Webpack, target untuk dihilangkan di masa depan.
-      img-src 'self' data: https://www.google-analytics.com;
-      font-src 'self' https://fonts.gstatic.com;
-      connect-src 'self' https://www.google-analytics.com;
-      frame-ancestors 'none'; # Perlindungan kuat terhadap clickjacking
-      form-action 'self';
-      base-uri 'self';
-      object-src 'none'; # Melarang plugin seperti Flash
-      media-src 'self';
+    # Kebijakan Keamanan Konten untuk meningkatkan keamanan.
+    # Setiap direktif dipisahkan oleh titik koma (;) dalam satu baris string.
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; form-action 'self'; base-uri 'self'; object-src 'none'; media-src 'self';"
+    
     # Mencegah situs dirender dalam iframe.
     X-Frame-Options = "DENY"
+    
     # Mengaktifkan perlindungan XSS bawaan browser.
     X-XSS-Protection = "1; mode=block"
+    
     # Mencegah browser menebak tipe konten.
-    X-Content-Type-Options = "nosniff"
+    X-Content-Type-Options = "nosiff"

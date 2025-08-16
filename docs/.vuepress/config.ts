@@ -239,23 +239,19 @@ export default defineUserConfig({
     ['meta', { name: 'yandex-verification', content: 'b7d4fe28c3d29dd2' }],
     ['meta', { name: 'naver-site-verification', content: '70ef6d5bfc1bba6db665b2fdba6ab2afd49f993f' }],
     ['meta', { name: 'p:domain_verify', content: 'bfa2c54f2e4986e4956c14d4fe581412' }],
-    ['script', { async: true, src: 'https://news.google.com/swg/js/v1/swg-basic.js', type: 'application/javascript' }],
+    ['script', { async: true, src: 'https://news.google.com/swg/js/v1/swg-basic.js' , type: 'application/javascript' }],
     ['meta', { httpEquiv: 'Content-Security-Policy', content: "script-src-elem 'self' default-src 'self' style-src 'self';" }],
     [
       'script',
       {},
       `
-        window.addEventListener('DOMContentLoaded', function() {
-          if (window.SWG_BASIC) {
-            window.SWG_BASIC.push(function(basicSubscriptions) {
-              basicSubscriptions.init({
-                type: "NewsArticle",
-                isPartOfType: ["Product"],
-                isPartOfProductId: "CAowkMq9DA:openaccess",
-                clientOptions: { theme: "light", lang: "id" },
-              });
-            });
-          }
+        (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
+          basicSubscriptions.init({
+            type: "NewsArticle",
+            isPartOfType: ["Product"],
+            isPartOfProductId: "CAowkMq9DA:openaccess",
+            clientOptions: { theme: "light", lang: "en-US" },
+          });
         });
       `
     ],
@@ -329,6 +325,7 @@ export default defineUserConfig({
           type: 'website',
           url: `https://ikimukti.com${page.path}`,
           site_name: 'Ikimukti.com',
+          // fbAppId: '1234567890',
           locale: page.frontmatter.lang || 'en-US',
           locale_alternate: Object.keys(generatedLocales).map(locale => ({
             lang: generatedLocales[locale].lang,
@@ -489,6 +486,7 @@ export default defineUserConfig({
       host: 'https://ikimukti.com',
     }),
     pwaPlugin(),
+    // Memanggil pwaPopupPlugin dengan type assertion
     (pwaPopupPlugin as (options: PwaPopupPluginOptions) => any)({}),
     webpackBundler({
       plugins: [

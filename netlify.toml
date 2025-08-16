@@ -48,9 +48,9 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    # Kebijakan Keamanan Konten untuk meningkatkan keamanan.
-    # Setiap direktif dipisahkan oleh titik koma (;) dalam satu baris string.
-    Content-Security-Policy = "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; form-action 'self'; base-uri 'self'; object-src 'none'; media-src 'self';"
+    # Kebijakan Keamanan Konten yang DITINGKATKAN untuk VuePress Profesional
+    # Setiap direktif dipisahkan oleh spasi, dan setiap kebijakan diakhiri dengan titik koma.
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://news.google.com giscus.app 'sha256-YOUR_INLINE_SCRIPT_HASH_HERE'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://avatars.githubusercontent.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' https://www.google-analytics.com https://www.google-analytics.com/g/collect; frame-src 'self' giscus.app; frame-ancestors 'none'; form-action 'self'; base-uri 'self'; object-src 'none';"
     
     # Mencegah situs dirender dalam iframe.
     X-Frame-Options = "DENY"
@@ -59,4 +59,4 @@
     X-XSS-Protection = "1; mode=block"
     
     # Mencegah browser menebak tipe konten.
-    X-Content-Type-Options = "nosiff"
+    X-Content-Type-Options = "nosniff"

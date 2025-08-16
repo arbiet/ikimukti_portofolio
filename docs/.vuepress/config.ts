@@ -235,6 +235,7 @@ export default defineUserConfig({
 
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: '/image/favicon-48x48.png' }],
+    ['meta', { name: 'algolia-site-verification', content: '37BAF5981A83D338' }],
   ],
 
   bundler: viteBundler(),

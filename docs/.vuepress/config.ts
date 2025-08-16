@@ -240,6 +240,7 @@ export default defineUserConfig({
     ['meta', { name: 'naver-site-verification', content: '70ef6d5bfc1bba6db665b2fdba6ab2afd49f993f' }],
     ['meta', { name: 'p:domain_verify', content: 'bfa2c54f2e4986e4956c14d4fe581412' }],
     ['script', { async: true, src: 'https://news.google.com/swg/js/v1/swg-basic.js' , type: 'application/javascript' }],
+    ['meta', { httpEquiv: 'Content-Security-Policy', content: "script-src-elem 'self' default-src 'self' style-src 'self';" }],
     [
       'script',
       {},

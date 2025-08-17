@@ -50,7 +50,7 @@
   [headers.values]
     # Kebijakan Keamanan Konten yang DITINGKATKAN untuk VuePress Profesional
     # Setiap direktif dipisahkan oleh spasi, dan setiap kebijakan diakhiri dengan titik koma.
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://news.google.com giscus.app; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://avatars.githubusercontent.com; font-src 'self' https://fonts.gstatic.com data:; frame-src 'self' giscus.app; frame-ancestors 'none'; form-action 'self'; base-uri 'self'; object-src 'none';"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://news.google.com giscus.app; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://avatars.githubusercontent.com; font-src 'self' https://fonts.gstatic.com data:; frame-src 'self' giscus.app; frame-ancestors 'none'; form-action 'self'; base-uri 'self'; object-src 'none';"
     
     # Mencegah situs dirender dalam iframe.
     X-Frame-Options = "DENY"

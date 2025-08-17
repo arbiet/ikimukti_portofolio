@@ -99,8 +99,17 @@ export default defineUserConfig({
   locales: generatedLocales,
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: '/image/favicon-48x48.png' }],
+    ['meta', { 'http-equiv': 'Content-Security-Policy', content: "default-src 'self'; style-src 'self' 'unsafe-inline';" }],
+    ['meta', { 'http-equiv': 'X-Content-Type-Options', content: 'nosniff' }],
+    ['meta', { 'http-equiv': 'X-Frame-Options', content: 'DENY' }],
+    ['meta', { 'http-equiv': 'X-XSS-Protection', content: '1; mode=block' }],
+    ['meta', { 'http-equiv': 'Content-Security-Policy', content: "default-src 'self'; style-src 'self' 'nonce-random-nonce-value';" }],
+    ['meta', { 'http-equiv': 'Content-Security-Policy', content: "default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; script-src 'self' http://ikimukti.com 'unsafe-inline' 'unsafe-eval';" }],
     ['meta', { name: 'algolia-site-verification', content: '37BAF5981A83D338' }],
     ['meta', { name: 'msvalidate.01', content: '4077B11CAE89D53B7DAE1D82710447B0' }],
+    ['meta', { name: 'yandex-verification', content: 'b7d4fe28c3d29dd2' }],
+    ['meta', { name: 'naver-site-verification', content: '70ef6d5bfc1bba6db665b2fdba6ab2afd49f993f' }],
+    ['meta', { name: 'p:domain_verify', content: 'bfa2c54f2e4986e4956c14d4fe581412' }],
     ['script', { async: true, src: 'https://news.google.com/swg/js/v1/swg-basic.js' }],
     ['script', {}, `
       (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {

@@ -110,7 +110,7 @@ export default defineUserConfig({
         basicSubscriptions.init({
           type: "NewsArticle",
           isPartOfType: ["Product"],
-          isPartOfProductId: "CAowkMq9DA:openaccess",
+          isPartOfProductId: "CAown9e9DA:openaccess",
           clientOptions: { theme: "light", lang: "en-US" },
         });
       });

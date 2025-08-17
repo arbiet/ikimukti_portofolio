@@ -11,19 +11,17 @@
   /** 背景颜色 */
 
   /*
-  --vp-c-bg: #fff;
-  --vp-c-bg-alt: #f6f6f7;
-  --vp-c-bg-elv: #fff;
-  --vp-c-bg-soft: #f6f6f7;
-  */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #f0f0f0; /* Slightly darker for better contrast */
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: #f0f0f0;
 
   /** 文本颜色 */
 
   /*
-  --vp-c-text-1: rgba(60, 60, 67);
-  --vp-c-text-2: rgba(60, 60, 67, 0.78);
-  --vp-c-text-3: rgba(60, 60, 67, 0.56);
-  */
+  --vp-c-text-1: #222222; /* Increased contrast */
+  --vp-c-text-2: #444444; /* Increased contrast */
+  --vp-c-text-3: #666666; /* Increased contrast */
 }
 
 /** 深色模式 */
@@ -43,8 +41,12 @@
   */
 
   /*
-  --vp-c-text-1: rgba(255, 255, 245, 0.86);
-  --vp-c-text-2: rgba(235, 235, 245, 0.6);
-  --vp-c-text-3: rgba(235, 235, 245, 0.38);
-  */
+  --vp-c-text-1: #fafafa; /* Increased contrast for dark mode */
+  --vp-c-text-2: #cccccc;
+  --vp-c-text-3: #999999;
+}
+
+img.vp-image {
+  width: 48px;
+  height: 48px;
 }

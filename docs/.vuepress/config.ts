@@ -115,6 +115,13 @@ export default defineUserConfig({
         });
       });
     `],
+    ['link', { rel: 'apple-touch-icon', sizes: '192x192', href: '/image/apple-touch-icon-192x192.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/image/favicon-48x48.png', sizes: '48x48' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/image/favicon-192x192.png', sizes: '192x192' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/image/favicon-512x512.png', sizes: '512x512' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '192x192', href: '/image/apple-touch-icon-192x192.png' }],
+    ['link', { rel: 'mask-icon', href: '/image/maskable-icon-192x192.png', color: '#222' }],
+    ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
   ],
 
   // --- Konfigurasi Build ---

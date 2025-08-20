@@ -79,7 +79,7 @@
     "markmap-lib": "^0.18.12",
     "markmap-toolbar": "^0.18.12",
     "markmap-view": "^0.18.12",
-    "mermaid": "^11.9.0",
+    "mermaid": "^11.10.0",
     "pyodide": "^0.28.0",
     "swiper": "^11.2.10",
     "vuepress-plugin-open-graph": "^1.21.0"

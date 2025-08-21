@@ -17,6 +17,7 @@ author:
     url: "https://ikimukti.com"
 createTime: 2025/08/16 09:07:10
 permalink: /ru/privacy-policy/
+cover: /image/cover.png
 lang: ru-RU
 sticky: true
 draft: false

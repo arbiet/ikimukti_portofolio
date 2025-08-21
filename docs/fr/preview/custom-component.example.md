@@ -1,7 +1,7 @@
 ---
 title: Custom Component
 tags:
-  - preview
+  - Preview
   - component
 createTime: 2025/08/03 23:10:52
 permalink: /fr/article/m3lbtobd/

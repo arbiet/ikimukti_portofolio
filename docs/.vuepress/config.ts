@@ -165,6 +165,18 @@ export default defineUserConfig({
       pagination: 15,
       categoriesExpand: "deep",
       tagsTheme: 'colored',
+      archivesLink: '/archives/',
+      categoriesLink: '/categories/',
+      tagsLink: '/tags/',
+      categoriesTransform: (categories) => categories.map(cat => ({ 
+        ...cat, 
+        link: `/categories/${(cat as any).slug ?? ''}/`,
+        id: (cat as any).id,
+        name: (cat as any).name || (cat as any).title || 'Uncategorized',
+        sort: (cat as any).sort || 0, 
+      })),
+      postCover: 'left',
+      
     },
     article: '/article/',
     

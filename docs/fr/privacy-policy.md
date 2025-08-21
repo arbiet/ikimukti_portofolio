@@ -17,6 +17,7 @@ author:
     url: "https://ikimukti.com"
 createTime: 2025/08/16 09:07:10
 permalink: /fr/politique-de-confidentialite/
+cover: /image/cover.png
 lang: fr-FR
 sticky: true
 draft: false

@@ -18,6 +18,7 @@ author:
 createTime: 2025/08/16 09:07:10
 permalink: /privacy-policy/
 lang: en-US
+cover: /image/cover.png
 sticky: true
 draft: false
 excerpt: "This policy explains how ikimukti.com collects, uses, and protects your personal data in accordance with applicable laws."

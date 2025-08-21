@@ -16,6 +16,7 @@ author:
     url: "https://ikimukti.com"
 createTime: 2025/08/16 09:10:45
 permalink: /fr/conditions-d-utilisation/
+cover: /image/cover.png
 lang: fr-FR
 sticky: true
 draft: false

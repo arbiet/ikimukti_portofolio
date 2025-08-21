@@ -151,8 +151,8 @@ const createNavbar = (lang: keyof typeof translations) => {
   return [
     { text: t.home, link: `${prefix}/` },
     { text: t.blog, link: `${prefix}/blog/` },
-    { text: t.news, link: `${prefix}/news/` },
-    { text: t.tutorial, link: `${prefix}/tutorial/` },
+    { text: t.news, link: `${prefix}/tags/?tag=News` },
+    { text: t.tutorial, link: `${prefix}/tags/?tag=Tutorials` },
     {
       text: t.mainTopics,
       items: [

@@ -129,13 +129,13 @@ export default defineUserConfig({
           y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       })(window, document, "clarity", "script", "t1gjm99ohi");
     `],
-    ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-V5158P89W3' }],
+    ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-CVLCQFETCB' }],
     ['script', {}, `
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-V5158P89W3');
+      gtag('config', 'G-CVLCQFETCB');
     `],
   ],
 

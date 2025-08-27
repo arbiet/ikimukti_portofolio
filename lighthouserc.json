@@ -1,0 +1,21 @@
+{
+  "ci": {
+    "collect": {
+      "staticDistDir": "./docs/.vuepress/dist"
+    },
+    "assert": {
+      "preset": "lighthouse:recommended",
+      "assertions": {
+        "categories:performance": ["warn"],
+        "categories:accessibility": ["warn"],
+        "categories:best-practices": ["warn"],
+        "categories:seo": ["warn"],
+        "first-contentful-paint": ["warn", { "maxNumericValue": 2000 }],
+        "interactive": ["warn", { "maxNumericValue": 3000 }]
+      }
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    }
+  }
+}

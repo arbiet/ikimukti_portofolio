@@ -15,6 +15,8 @@ import { pwaPlugin } from '@vuepress/plugin-pwa';
 import { pwaPopupPlugin, type PwaPopupPluginOptions } from '@vuepress/plugin-pwa-popup';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import Imagemin from 'vuepress-plugin-imagemin';
+import { markdownImagePlugin } from '@vuepress/plugin-markdown-image';
 
 // --- Konfigurasi Multi-Bahasa Terpusat ---
 const localesConfig = {
@@ -138,11 +140,50 @@ export default defineUserConfig({
       gtag('config', 'G-CVLCQFETCB');
     `],
     ['script', { type: 'text/javascript', 'data-cmp-ab': '1', src: 'https://cdn.consentmanager.net/delivery/autoblocking/437e264722f73.js', 'data-cmp-host': 'c.delivery.consentmanager.net', 'data-cmp-cdn': 'cdn.consentmanager.net', 'data-cmp-codesrc': '16' }],
+    [
+      'script',
+      {
+        src: 'https://example.com/non-critical-script.js',
+        async: true,
+      },
+    ],
   ],
 
   // --- Konfigurasi Build ---
-  bundler: viteBundler(),
-  shouldPrefetch: false,
+  bundler: webpackBundler({
+    chainWebpack: (config, isServer, isBuild) => {
+      if (isBuild && process.env.npm_config_report) {
+        config
+         .plugin('webpack-bundle-analyzer')
+         .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin);
+      }
+    },
+    configureWebpack: (config, isServer, isBuild) => {
+      if (isBuild &&!isServer) {
+        return {
+          optimization: {
+            splitChunks: {
+              cacheGroups: {
+                vendors: {
+                  name: 'chunk-vendors',
+                  test: /[\\/]node_modules[\\/]/,
+                  priority: -10,
+                  chunks: 'initial',
+                },
+                common: {
+                  name: 'chunk-common',
+                  minChunks: 2,
+                  priority: -20,
+                  chunks: 'initial',
+                  reuseExistingChunk: true,
+                },
+              },
+            },
+          },
+        };
+      }
+    },
+  }),
 
   // --- Konfigurasi Tema Plume ---
   theme: plumeTheme({
@@ -228,7 +269,7 @@ export default defineUserConfig({
           ...ogp,
           title: page.frontmatter.title || 'Ikimukti.com',
           description: page.frontmatter.description || 'Pusat Pengetahuan untuk Produktivitas Digital.',
-          image: `https://ikimukti.com${page.frontmatter.cover || '/favicon-48x48.png'}`,
+          image: `https://ikimukti.com${page.frontmatter.banner || '/favicon-48x48.png'}`,
           url: `https://ikimukti.com${page.path}`,
           site_name: 'Ikimukti.com',
           type: 'website',
@@ -278,6 +319,7 @@ export default defineUserConfig({
       mapping: 'pathname',
     },
   }),
+  shouldPrefetch: false,
 
   // --- Plugin VuePress Eksternal ---
   plugins: [
@@ -295,5 +337,50 @@ export default defineUserConfig({
     webpackBundler({
       plugins: [new BundleAnalyzerPlugin({ analyzerMode: 'static', openAnalyzer: false })],
     }),
+    Imagemin({
+      // Opsi untuk GIF
+      gifsicle: {
+        optimizationLevel: 7,
+        interlaced: false,
+      },
+      // Opsi untuk PNG
+      optipng: {
+        optimizationLevel: 7,
+      },
+      // Opsi untuk JPG/JPEG
+      mozjpeg: {
+        quality: 65, // Kualitas antara 0 dan 100
+      },
+      // Opsi tambahan untuk PNG
+      pngquant: {
+        quality: [0.65, 0.9],
+        speed: 4,
+      },
+      // Opsi untuk SVG
+      svgo: {
+        plugins: [],
+      },
+      webp: {
+        quality: 75,
+      },
+      jpegTran: {
+        progressive: true,
+      },
+    }),
+    markdownImagePlugin({
+      lazyload: true,
+    }),
+    {
+      name: 'robots',
+      host: "https://ikimukti.com",
+      disallowAll: false,
+      sitemap: "/sitemap.xml",
+      policies: [
+        {
+          userAgent: '*',
+          disallow: ['/admin', '/private/'],
+        },
+      ],
+    },
   ],
 });

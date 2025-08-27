@@ -137,6 +137,7 @@ export default defineUserConfig({
 
       gtag('config', 'G-CVLCQFETCB');
     `],
+    ['script', { type: 'text/javascript', 'data-cmp-ab': '1', src: 'https://cdn.consentmanager.net/delivery/autoblocking/437e264722f73.js', 'data-cmp-host': 'c.delivery.consentmanager.net', 'data-cmp-cdn': 'cdn.consentmanager.net', 'data-cmp-codesrc': '16' }],
   ],
 
   // --- Konfigurasi Build ---

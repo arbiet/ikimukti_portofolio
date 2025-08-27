@@ -122,6 +122,13 @@ export default defineUserConfig({
     ['link', { rel: 'apple-touch-icon', sizes: '192x192', href: '/image/apple-touch-icon-192x192.png' }],
     ['link', { rel: 'mask-icon', href: '/image/maskable-icon-192x192.png', color: '#222' }],
     ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
+    ['script', {}, `
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "t1gjm99ohi");
+    `],
   ],
 
   // --- Konfigurasi Build ---

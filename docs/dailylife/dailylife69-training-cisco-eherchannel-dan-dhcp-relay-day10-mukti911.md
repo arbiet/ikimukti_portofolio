@@ -14,13 +14,15 @@ author:
   email: "ikimukti@gmail.com"
   url: "https://ikimukti.com"
 lang: en-US
-cover: /image/dailylife/day10-cover.png
+cover: /image/dailylife/cover-day10.png
 sticky: false
 draft: false
+index: true
 excerpt: "Experience from Cisco training covering EtherChannel and DHCP Relay with BestPath Network. Cisco training is essential for IT professionals."
 ---
 
 # Dailylife - Cisco Training - EtherChannel and DHCP Relay
+![Cover Image|400x0](/image/dailylife/cover-day10.png 'Cover Image')
 
 Greetings,
 
@@ -44,6 +46,7 @@ To gain experience and a basic understanding of Cisco and its devices, and to be
 - 19.30 – 22.00 < Training
 
 ## E. Materials Delivered
+![Material Image|400x0](/image/dailylife/network-part-2-1.png 'Material Image')
 
 ### EtherChannel on Cisco
 
@@ -97,6 +100,7 @@ Another consideration when implementing EtherChannel is the load-balancing metho
 The best method is src-dst-mixed-ip-port, but not all IOS versions support this method.
 
 **Example of EtherChannel Implementation:**
+![EtherChannel Implementation|400x0](/image/dailylife/etherchannel-implementation.png 'EtherChannel Implementation')
 
 1. Create a topology with two multilayer switches.
 2. Configure EtherChannel on all L3 Switch interfaces using mode "on":
@@ -132,6 +136,8 @@ DHCP relay is a protocol that relays DHCP messages between clients and servers o
 4. The server sends a DHCP Ack, which is forwarded to the PC.
 
 **Example of DHCP Relay Implementation:**
+
+![DHCP Relay Implementation|400x0](/image/dailylife/dhcp-relay-implementation.png 'DHCP Relay Implementation')
 
 - **As DHCP Server**
 	- Router0 : fa0/0 10.10.10.1/24, fa0/1 20.20.20.1/30

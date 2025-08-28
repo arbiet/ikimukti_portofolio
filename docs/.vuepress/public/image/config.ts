@@ -367,25 +367,8 @@ export default defineUserConfig({
             type: 'image/png',
           },
         ],
-        short_name: 'ikimukticom',
-        shortcuts: [
-          {
-            name: 'Blog',
-            short_name: 'Blog',
-            description: 'Go to blog',
-            url: '/blog',
-          },
-          {
-            name: 'Home',
-            short_name: 'Home',
-            description: 'Go to homepage',
-            url: '/',
-          },
-        ],
-        theme_color: '#3eaf7c',
-        start_url: '/?utm_source=homescreen',
       },
-      update: 'hint',
+      update: 'hint'
     }),
     (pwaPopupPlugin as (options: PwaPopupPluginOptions) => any)({
        locales: pwaPopupLocales,
